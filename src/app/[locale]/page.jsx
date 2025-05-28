@@ -1,8 +1,10 @@
-import HomeComponent from "@/lib/views/HomeComponent";
+import LandingComponent from "@/lib/views/LandingPage/Index";
 
-export default function Home() {
-	return <HomeComponent />;
-}
+const LandingPage = () => {
+	return <LandingComponent />;
+};
+
+export default LandingPage;
 
 // import { useTranslations } from "next-intl";
 // import { Link } from "@/i18n/navigation";

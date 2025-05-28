@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { iconSvg } from "@/lib/Icons/icon";
 
 const TextInput = ({
 	width = "w-full",
@@ -123,7 +122,7 @@ const TextInput = ({
 					}`}
 					required={isRequired}
 				/>
-				{isPasswordField && (
+				{/* {isPasswordField && (
 					<div className="absolute inset-y-0 right-0 flex items-center px-6">
 						<button
 							onClick={togglePasswordVisibility}
@@ -135,7 +134,7 @@ const TextInput = ({
 								: iconSvg.eyeCloseSvg}
 						</button>
 					</div>
-				)}
+				)} */}
 				{hasIconRight && !isPasswordField && (
 					<div
 						className={`absolute inset-y-0 right-0 flex items-center px-4 ${

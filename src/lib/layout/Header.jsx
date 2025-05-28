@@ -1,250 +1,164 @@
 "use client";
 
 import Button from "@/lib/components/Button";
-import Divider from "@/lib/components/Divider";
 import TextInput from "@/lib/components/TextInput";
-import { iconSvg } from "@/lib/Icons/icon";
 import moment from "moment";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { icons } from "../icons/iconSvg";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { ChevronDown } from "lucide-react";
 
 const HeaderPublic = () => {
 	const router = useRouter();
-	const [search, setSearch] = useState("");
-	const [isVisible, setIsVisible] = useState(true);
-	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const [isScroll, setIsScroll] = useState(false);
+	const [activeDropdown, setActiveDropdown] = useState(null);
 
 	const menus = [
+		{ label: "Tentang Kami", href: "/" },
 		{
-			label: "Info",
+			label: "Layanan",
 			href: "/",
+			subMenu: [
+				{ label: "Web Development", href: "/web-development" },
+				{ label: "Mobile Apps", href: "/mobile-apps" },
+				{ label: "UI/UX Design", href: "/ui-ux-design" },
+				{ label: "Digital Marketing", href: "/digital-marketing" },
+			],
 		},
-		{
-			label: "Talks",
-			href: "/",
-		},
-		{
-			label: "Speakers",
-			href: "/",
-		},
-		{
-			label: "Sponsors",
-			href: "/",
-		},
+		{ label: "FAQ", href: "/" },
+		{ label: "Kontak", href: "/" },
 	];
 
 	useEffect(() => {
-		let lastScrollY = window.scrollY;
-
-		const controlNavbar = () => {
-			const currentScrollY = window.scrollY;
-
-			if (currentScrollY > lastScrollY && currentScrollY > 100) {
-				setIsVisible(false);
-			} else {
-				setIsVisible(true);
-			}
-
-			lastScrollY = currentScrollY;
+		const handleScroll = () => {
+			setIsScroll(window.scrollY > 100);
 		};
 
-		window.addEventListener("scroll", controlNavbar);
-
+		window.addEventListener("scroll", handleScroll);
 		return () => {
-			window.removeEventListener("scroll", controlNavbar);
+			window.removeEventListener("scroll", handleScroll);
 		};
 	}, []);
 
+	const handleMouseEnter = (index) => {
+		if (menus[index].subMenu) {
+			setActiveDropdown(index);
+		}
+	};
+
+	const handleMouseLeave = () => {
+		setActiveDropdown(null);
+	};
+
 	return (
-		<div className=" bg-white flex flex-col gap-6">
-			<div
-				className={`transition-all duration-300 md:block hidden ease-in-out ${
-					isVisible
-						? "opacity-100 translate-y-0"
-						: "opacity-0 -translate-y-full"
-				}`}
-			>
-				<div className="flex justify-between h-[105px]">
-					<div className="w-1/3 flex flex-col items-start justify-between max-w-60">
-						<div className="text-[#393C3F] text-[13px] h-8 items-center flex">
-							{moment().format("dddd, MMMM Do YYYY")}
-						</div>
-						<div className="font-semibold">
-							Media To Discover Yogyakarta Culture & Football
-						</div>
-					</div>
-					<div className="w-1/3 flex flex-col items-center justify-between max-w-64">
-						<Link href={"/"}>{iconSvg.logoPublicSvg}</Link>
-						<div className="flex w-full justify-between">
-							{menus.map((val, index) => (
-								<Link href={val.href} key={index}>
-									{val.label}
-								</Link>
-							))}
-						</div>
-					</div>
-					<div className="w-1/3 flex flex-col items-end justify-between max-w-60">
-						<div className="flex gap-4 items-center h-8">
-							<div>Support us, with</div>
-							<Button className="rounded-md" size="small">
-								Subscribe
-							</Button>
-						</div>
-						<TextInput
-							type="search"
-							width="w-48"
-							value={search}
-							placeholder="Search Collection"
-							// debounceTime={2000}
-							hasIconLeft={iconSvg.search}
-							size="small"
-							onChange={(e) => {
-								setSearch(e.target.value);
-							}}
-							onKeyDown={(e) => {
-								if (e.key === "Enter") {
-									const params = new URLSearchParams(window.location.search);
-									params.set("search", search);
+		<nav
+			className={`fixed top-0 w-full z-50 border-b border-white  ease-in-out ${
+				isScroll || activeDropdown ? "bg-white shadow-md" : "bg-transparent"
+			}`}
+			onMouseLeave={handleMouseLeave}
+		>
+			<div className="flex justify-between items-center px-6 py-4 relative">
+				<div>{icons.iconLogo}</div>
 
-									router.push(`/read/?${params.toString()}`);
-								}
-							}}
-						/>
-					</div>
-				</div>
-			</div>
-
-			<nav
-				className={`fixed top-0 left-0 flex justify-center w-full md:h-20 h-16 bg-[#F7F8FA] border-b border-[#E0E1E4] shadow-md transition-transform duration-300 ease-in-out z-50 ${
-					isVisible ? "md:-translate-y-full translate-y-0" : "translate-y-0"
-				}`}
-			>
-				<div className="flex md:px-28 px-4 w-full max-w-[1440px] justify-between items-center h-full">
-					{/* Mobile Menu Button */}
-					<button
-						className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1"
-						onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-						aria-label="Toggle mobile menu"
-					>
-						<span
-							className={`block w-6 h-0.5 bg-gray-800 transition-transform duration-300 ${
-								isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
-							}`}
-						></span>
-						<span
-							className={`block w-6 h-0.5 bg-gray-800 transition-opacity duration-300 ${
-								isMobileMenuOpen ? "opacity-0" : ""
-							}`}
-						></span>
-						<span
-							className={`block w-6 h-0.5 bg-gray-800 transition-transform duration-300 ${
-								isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
-							}`}
-						></span>
-					</button>
-
-					{/* Logo */}
-					<div className="hidden md:flex gap-8 items-center">
-						<Link href="/" className="flex">
-							<div>{iconSvg.logoPublicSvg}</div>
-						</Link>
-
-						{/* Desktop Menu */}
-						<div className="gap-8 flex">
-							{menus.map((val, index) => (
-								<Link
-									href={val.href}
-									key={index}
-									className="hover:text-blue-600 transition-colors duration-200 font-medium"
-								>
-									{val.label}
-								</Link>
-							))}
-						</div>
-					</div>
-
-					<Link href="/" className="flex">
-						<div className="flex md:hidden">{iconSvg.logoMarkSvg}</div>
-					</Link>
-
-					<div className="hidden md:block">
-						<TextInput
-							type="search"
-							width="w-48"
-							value={search}
-							placeholder="Search Collection"
-							// debounceTime={2000}
-							hasIconLeft={iconSvg.search}
-							size="small"
-							onChange={(e) => {
-								setSearch(e.target.value);
-							}}
-							onKeyDown={(e) => {
-								if (e.key === "Enter") {
-									const params = new URLSearchParams(window.location.search);
-									params.set("search", search);
-
-									router.push(`/read/?${params.toString()}`);
-								}
-							}}
-						/>
-					</div>
-				</div>
-
-				{/* Mobile Menu Dropdown */}
-				<div
-					className={`absolute top-full left-0 w-full bg-[#F7F8FA] shadow-lg border-b border-[#E0E1E4] md:hidden transition-all duration-300 ease-in-out ${
-						isMobileMenuOpen
-							? "opacity-100 visible transform translate-y-0"
-							: "opacity-0 invisible transform -translate-y-2"
-					}`}
-				>
-					<div className="px-4 py-4 space-y-2">
-						<TextInput
-							type="search"
-							width="w-full"
-							value={search}
-							placeholder="Search Collection"
-							// debounceTime={2000}
-							hasIconLeft={iconSvg.search}
-							size="small"
-							onChange={(e) => {
-								setSearch(e.target.value);
-							}}
-							onKeyDown={(e) => {
-								if (e.key === "Enter") {
-									setIsMobileMenuOpen(false);
-									const params = new URLSearchParams(window.location.search);
-									params.set("search", search);
-
-									router.push(`/read/?${params.toString()}`);
-								}
-							}}
-						/>
-						{menus.map((val, index) => (
+				<div className="flex gap-8 relative">
+					{menus.map((val, index) => (
+						<div
+							key={index}
+							className="relative"
+							onMouseEnter={() => handleMouseEnter(index)}
+						>
 							<Link
 								href={val.href}
-								key={index}
-								className="block py-2 px-4 hover:bg-gray-100 rounded-lg transition-colors duration-200 font-medium"
-								onClick={() => setIsMobileMenuOpen(false)}
+								className={`cursor-pointer   ${
+									isScroll || activeDropdown
+										? "text-gray-800 hover:text-blue-600"
+										: "text-white hover:text-blue-200"
+								} ${val.subMenu ? "flex items-center gap-1" : ""}`}
 							>
 								{val.label}
+								{val.subMenu && (
+									<ChevronDown
+										className={`w-4 h-4 transition-transform  ${
+											activeDropdown === index ? "rotate-180" : ""
+										}`}
+									/>
+								)}
 							</Link>
-						))}
+						</div>
+					))}
+				</div>
+
+				<div>{icons.iconLogo}</div>
+			</div>
+
+			{/* Full-width dropdown */}
+			{activeDropdown !== null && menus[activeDropdown].subMenu && (
+				<div
+					className={`absolute left-0 w-full transition-all  ease-in-out transform ${
+						activeDropdown !== null
+							? "opacity-100 translate-y-0"
+							: "opacity-0 -translate-y-2"
+					} ${isScroll ? "bg-white shadow-md border-t" : "bg-white shadow-md"}`}
+					style={{ top: "100%" }}
+				>
+					<div className="container mx-auto px-6 py-8">
+						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+							{menus[activeDropdown].subMenu.map((subItem, subIndex) => (
+								<Link
+									key={subIndex}
+									href={subItem.href}
+									className="group block p-4 rounded-lg hover:bg-gray-50 transition-colors "
+								>
+									<div className="flex items-start gap-3">
+										<div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-blue-200 transition-colors ">
+											<svg
+												className="w-4 h-4 text-blue-600"
+												fill="none"
+												stroke="currentColor"
+												viewBox="0 0 24 24"
+											>
+												<path
+													strokeLinecap="round"
+													strokeLinejoin="round"
+													strokeWidth={2}
+													d="M13 10V3L4 14h7v7l9-11h-7z"
+												/>
+											</svg>
+										</div>
+										<div>
+											<h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors ">
+												{subItem.label}
+											</h3>
+											<p className="text-sm text-gray-500 mt-1 leading-relaxed">
+												Professional {subItem.label.toLowerCase()} services to
+												help grow your business
+											</p>
+										</div>
+									</div>
+								</Link>
+							))}
+						</div>
+
+						{/* Optional: Call to action section */}
+						<div className="mt-8 pt-6 border-t border-gray-200">
+							<div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+								<div>
+									<h4 className="font-semibold text-gray-900">
+										Need a custom solution?
+									</h4>
+									<p className="text-sm text-gray-500">
+										Let's discuss your specific requirements
+									</p>
+								</div>
+								<Button>Get Started</Button>
+							</div>
+						</div>
 					</div>
 				</div>
-			</nav>
-
-			{isMobileMenuOpen && (
-				<div
-					className="fixed inset-0 bg-black/20 bg-opacity-25 z-40 md:hidden"
-					onClick={() => setIsMobileMenuOpen(false)}
-				></div>
 			)}
-
-			<Divider />
-		</div>
+		</nav>
 	);
 };
 

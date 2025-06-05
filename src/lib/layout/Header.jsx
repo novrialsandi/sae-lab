@@ -1,9 +1,6 @@
 "use client";
 
 import Button from "@/lib/components/Button";
-import TextInput from "@/lib/components/TextInput";
-import moment from "moment";
-import { useRouter } from "next/navigation";
 import { icons } from "../icons/iconSvg";
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
@@ -11,24 +8,49 @@ import { Link } from "@/i18n/navigation";
 import { ChevronDown } from "lucide-react";
 
 const HeaderPublic = () => {
-	const router = useRouter();
+	const tNavbar = useTranslations("navbar");
+	const tServices = useTranslations("services");
+
 	const [isScroll, setIsScroll] = useState(false);
 	const [activeDropdown, setActiveDropdown] = useState(null);
 
 	const menus = [
-		{ label: "Tentang Kami", href: "/" },
+		{ key: "about", href: "/" },
 		{
-			label: "Layanan",
+			key: "services",
 			href: "/",
-			subMenu: [
-				{ label: "Web Development", href: "/web-development" },
-				{ label: "Mobile Apps", href: "/mobile-apps" },
-				{ label: "UI/UX Design", href: "/ui-ux-design" },
-				{ label: "Digital Marketing", href: "/digital-marketing" },
-			],
+			subMenu: {
+				items: [
+					"translation",
+					"proofreading",
+					"swornTranslation",
+					"transcription",
+					"captionInstagram",
+					"englishCourse",
+					"bipaClass",
+					"subtitling",
+					"typing",
+					"formatting",
+					"pptLayouting",
+				].map((key) => ({
+					key,
+					title: tServices(`items.${key}.title`),
+					description: tServices(`items.${key}.description`),
+					href: `/service/${
+						key === "swornTranslation"
+							? "sworn-translation"
+							: key === "captionInstagram"
+							? "instagram-caption"
+							: key === "pptLayouting"
+							? "PPT-layouting"
+							: key === "bipaClass"
+							? "BIPA-class"
+							: key
+					}`,
+				})),
+			},
 		},
-		{ label: "FAQ", href: "/" },
-		{ label: "Kontak", href: "/" },
+		{ key: "contact", href: "/" },
 	];
 
 	useEffect(() => {
@@ -54,13 +76,11 @@ const HeaderPublic = () => {
 
 	return (
 		<nav
-			className={`fixed top-0 w-full z-50 border-b border-white  ease-in-out ${
-				isScroll || activeDropdown ? "bg-white shadow-md" : "bg-transparent"
-			}`}
+			className={`fixed top-0 w-full z-50  bg-white shadow-md  ease-in-out `}
 			onMouseLeave={handleMouseLeave}
 		>
 			<div className="flex justify-between items-center px-6 py-4 relative">
-				<div>{icons.iconLogo}</div>
+				<Link href={"/"}>{icons.iconLogo}</Link>
 
 				<div className="flex gap-8 relative">
 					{menus.map((val, index) => (
@@ -71,16 +91,16 @@ const HeaderPublic = () => {
 						>
 							<Link
 								href={val.href}
-								className={`cursor-pointer   ${
-									isScroll || activeDropdown
+								className={`cursor-pointer ${
+									isScroll || activeDropdown === index
 										? "text-gray-800 hover:text-blue-600"
-										: "text-white hover:text-blue-200"
+										: "hover:text-blue-200"
 								} ${val.subMenu ? "flex items-center gap-1" : ""}`}
 							>
-								{val.label}
+								{tNavbar(`menu.${val.key}`)}
 								{val.subMenu && (
 									<ChevronDown
-										className={`w-4 h-4 transition-transform  ${
+										className={`w-4 h-4 transition-transform ${
 											activeDropdown === index ? "rotate-180" : ""
 										}`}
 									/>
@@ -96,23 +116,24 @@ const HeaderPublic = () => {
 			{/* Full-width dropdown */}
 			{activeDropdown !== null && menus[activeDropdown].subMenu && (
 				<div
-					className={`absolute left-0 w-full transition-all  ease-in-out transform ${
+					className={`absolute left-0 w-full transition-all ease-in-out transform z-50 ${
 						activeDropdown !== null
 							? "opacity-100 translate-y-0"
 							: "opacity-0 -translate-y-2"
 					} ${isScroll ? "bg-white shadow-md border-t" : "bg-white shadow-md"}`}
 					style={{ top: "100%" }}
+					onMouseLeave={() => setActiveDropdown(null)}
 				>
 					<div className="container mx-auto px-6 py-8">
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-							{menus[activeDropdown].subMenu.map((subItem, subIndex) => (
+							{menus[activeDropdown].subMenu.items.map((subItem, subIndex) => (
 								<Link
 									key={subIndex}
 									href={subItem.href}
-									className="group block p-4 rounded-lg hover:bg-gray-50 transition-colors "
+									className="group block p-4 rounded-lg hover:bg-gray-50 transition-colors"
 								>
 									<div className="flex items-start gap-3">
-										<div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-blue-200 transition-colors ">
+										<div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-blue-200 transition-colors">
 											<svg
 												className="w-4 h-4 text-blue-600"
 												fill="none"
@@ -128,12 +149,11 @@ const HeaderPublic = () => {
 											</svg>
 										</div>
 										<div>
-											<h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors ">
-												{subItem.label}
+											<h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+												{subItem.title}
 											</h3>
 											<p className="text-sm text-gray-500 mt-1 leading-relaxed">
-												Professional {subItem.label.toLowerCase()} services to
-												help grow your business
+												{subItem.description}
 											</p>
 										</div>
 									</div>
@@ -141,7 +161,6 @@ const HeaderPublic = () => {
 							))}
 						</div>
 
-						{/* Optional: Call to action section */}
 						<div className="mt-8 pt-6 border-t border-gray-200">
 							<div className="flex flex-col sm:flex-row items-center justify-between gap-4">
 								<div>
@@ -152,7 +171,9 @@ const HeaderPublic = () => {
 										Let's discuss your specific requirements
 									</p>
 								</div>
-								<Button>Get Started</Button>
+								<button className="bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700 transition">
+									Get Started
+								</button>
 							</div>
 						</div>
 					</div>

@@ -1,6 +1,246 @@
 {
-	"HomePage": {
-		"title": "Hallo",
-		"about": "dunia"
+	"meta": {
+		"language": "id",
+		"version": "1.0.0",
+		"lastUpdated": "2025-06-05"
+	},
+	"common": {
+		"loading": "Memuat...",
+		"error": "Terjadi kesalahan",
+		"success": "Berhasil",
+		"cancel": "Batal",
+		"confirm": "Konfirmasi",
+		"close": "Tutup",
+		"save": "Simpan",
+		"edit": "Edit",
+		"delete": "Hapus",
+		"view": "Lihat",
+		"more": "Selengkapnya"
+	},
+	"navbar": {
+		"brand": "SAE",
+		"menu": {
+			"about": "Tentang Kami",
+			"services": "Layanan",
+			"contact": "Kontak"
+		},
+		"locale": {
+			"current": "ID",
+			"switch": "EN"
+		},
+		"cta": {
+			"consultation": "Konsultasi Gratis",
+			"consult": "Konsultasi Sekarang"
+		}
+	},
+	"hero": {
+		"title": "Layanan Bahasa Profesional",
+		"subtitle": "Jelajahi layanan kami",
+		"description": "Kami menyediakan konsultasi langsung antar personal. Komunikasi dua arah ini menjadikan setiap proses lebih personal. Kami juga menghargai waktu Anda!",
+		"cta": {
+			"primary": "Mulai Sekarang",
+			"secondary": "Pelajari Lebih Lanjut"
+		}
+	},
+	"services": {
+		"title": "Layanan Kami",
+		"subtitle": "Solusi bahasa lengkap untuk kebutuhan Anda",
+		"items": {
+			"translation": {
+				"title": "Translation",
+				"description": "Layanan terjemahan dokumen profesional",
+				"icon": "translate"
+			},
+			"proofreading": {
+				"title": "Proofreading",
+				"description": "Layanan proofreading dan editing menyeluruh",
+				"icon": "edit"
+			},
+			"swornTranslation": {
+				"title": "Sworn Translation",
+				"description": "Layanan terjemahan tersumpah bersertifikat",
+				"icon": "certificate"
+			},
+			"transcription": {
+				"title": "Transkripsi",
+				"description": "Layanan transkripsi audio dan video",
+				"icon": "microphone"
+			},
+			"captionInstagram": {
+				"title": "Caption Instagram",
+				"description": "Caption Instagram yang kreatif dan menarik",
+				"icon": "camera"
+			},
+			"englishCourse": {
+				"title": "English Course",
+				"description": "Program pembelajaran bahasa Inggris komprehensif",
+				"icon": "book"
+			},
+			"bipaClass": {
+				"title": "BIPA Class",
+				"description": "Kelas bahasa Indonesia untuk orang asing",
+				"icon": "users"
+			},
+			"subtitling": {
+				"title": "Subtitling",
+				"description": "Layanan subtitle dan caption video",
+				"icon": "video"
+			},
+			"typing": {
+				"title": "Typing",
+				"description": "Layanan pengetikan dan entry data profesional",
+				"icon": "keyboard"
+			},
+			"formatting": {
+				"title": "Formatting",
+				"description": "Tata letak dan formatting dokumen profesional",
+				"icon": "layout"
+			},
+			"pptLayouting": {
+				"title": "PPT Layouting",
+				"description": "Layanan desain dan tata letak PowerPoint",
+				"icon": "presentation"
+			}
+		}
+	},
+	"about": {
+		"title": "Tentang SAE",
+		"subtitle": "Mitra bahasa terpercaya Anda",
+		"description": "Kami berkomitmen memberikan layanan bahasa berkualitas tinggi dengan sentuhan personal dan keunggulan profesional.",
+		"features": {
+			"personal": {
+				"title": "Konsultasi Personal",
+				"description": "Komunikasi langsung untuk pemahaman yang lebih baik"
+			},
+			"quality": {
+				"title": "Jaminan Kualitas",
+				"description": "Standar profesional di setiap proyek"
+			},
+			"timely": {
+				"title": "Tepat Waktu",
+				"description": "Kami menghargai waktu dan deadline Anda"
+			}
+		}
+	},
+	"contact": {
+		"title": "Hubungi Kami",
+		"subtitle": "Hubungi kami untuk kebutuhan bahasa Anda",
+		"form": {
+			"name": {
+				"label": "Nama Lengkap",
+				"placeholder": "Masukkan nama lengkap Anda"
+			},
+			"email": {
+				"label": "Alamat Email",
+				"placeholder": "Masukkan alamat email Anda"
+			},
+			"phone": {
+				"label": "Nomor Telepon",
+				"placeholder": "Masukkan nomor telepon Anda"
+			},
+			"service": {
+				"label": "Layanan yang Dibutuhkan",
+				"placeholder": "Pilih layanan"
+			},
+			"message": {
+				"label": "Pesan",
+				"placeholder": "Ceritakan tentang proyek Anda"
+			},
+			"submit": "Kirim Pesan",
+			"sending": "Mengirim...",
+			"success": "Pesan berhasil dikirim!",
+			"error": "Gagal mengirim pesan. Silakan coba lagi."
+		},
+		"info": {
+			"address": {
+				"title": "Alamat",
+				"value": "Alamat Bisnis Anda"
+			},
+			"phone": {
+				"title": "Telepon",
+				"value": "+62 xxx xxxx xxxx"
+			},
+			"email": {
+				"title": "Email",
+				"value": "info@sae.com"
+			},
+			"hours": {
+				"title": "Jam Operasional",
+				"value": "Senin - Jumat: 09:00 - 18:00"
+			}
+		}
+	},
+	"footer": {
+		"brand": "SAE",
+		"tagline": "Layanan Bahasa Profesional",
+		"quickLinks": {
+			"title": "Tautan Cepat",
+			"items": {
+				"home": "Beranda",
+				"about": "Tentang",
+				"services": "Layanan",
+				"contact": "Kontak",
+				"privacy": "Kebijakan Privasi",
+				"terms": "Syarat Layanan"
+			}
+		},
+		"services": {
+			"title": "Layanan",
+			"items": {
+				"translation": "Translation",
+				"proofreading": "Proofreading",
+				"transcription": "Transkripsi",
+				"courses": "Kursus Bahasa"
+			}
+		},
+		"contact": {
+			"title": "Info Kontak",
+			"address": "Alamat Bisnis Anda",
+			"phone": "+62 xxx xxxx xxxx",
+			"email": "info@sae.com"
+		},
+		"social": {
+			"title": "Ikuti Kami",
+			"facebook": "Facebook",
+			"instagram": "Instagram",
+			"twitter": "Twitter",
+			"linkedin": "LinkedIn"
+		},
+		"copyright": "© 2025 SAE. Semua hak dilindungi."
+	},
+	"seo": {
+		"home": {
+			"title": "SAE - Layanan Bahasa Profesional",
+			"description": "Layanan translation, proofreading, dan kursus bahasa ahli. Konsultasi personal dan kualitas terjamin.",
+			"keywords": "terjemahan, proofreading, layanan bahasa, kursus bahasa Inggris, BIPA"
+		},
+		"about": {
+			"title": "Tentang SAE - Mitra Bahasa Profesional",
+			"description": "Pelajari komitmen kami terhadap layanan bahasa berkualitas dan pelayanan pelanggan yang personal.",
+			"keywords": "tentang SAE, layanan bahasa, terjemahan profesional"
+		},
+		"services": {
+			"title": "Layanan Bahasa - Translation, Kursus & Lainnya",
+			"description": "Rangkaian lengkap layanan bahasa termasuk translation, proofreading, kursus, dan layanan khusus.",
+			"keywords": "layanan terjemahan, kursus bahasa Inggris, BIPA, proofreading, transkripsi"
+		},
+		"contact": {
+			"title": "Kontak SAE - Dapatkan Konsultasi Gratis",
+			"description": "Hubungi kami untuk layanan bahasa profesional. Konsultasi gratis tersedia.",
+			"keywords": "kontak SAE, konsultasi layanan bahasa, quote terjemahan"
+		}
+	},
+	"validation": {
+		"required": "Field ini wajib diisi",
+		"email": "Masukkan alamat email yang valid",
+		"phone": "Masukkan nomor telepon yang valid",
+		"minLength": "Minimal {count} karakter diperlukan",
+		"maxLength": "Maksimal {count} karakter diizinkan"
+	},
+	"status": {
+		"online": "Online",
+		"offline": "Offline",
+		"busy": "Sibuk",
+		"available": "Tersedia untuk konsultasi"
 	}
 }

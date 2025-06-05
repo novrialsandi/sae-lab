@@ -1,6 +1,235 @@
 {
-	"HomePage": {
-		"title": "Hello world!",
-		"about": "Go to the about page"
+	"meta": {
+		"language": "en",
+		"version": "1.0.0",
+		"lastUpdated": "2025-06-05"
+	},
+	"common": {
+		"loading": "Loading...",
+		"error": "An error occurred",
+		"success": "Success",
+		"cancel": "Cancel",
+		"confirm": "Confirm",
+		"close": "Close",
+		"save": "Save",
+		"edit": "Edit",
+		"delete": "Delete",
+		"view": "View",
+		"more": "More"
+	},
+	"navbar": {
+		"brand": "SAE",
+		"menu": {
+			"about": "About Us",
+			"services": "Services",
+			"contact": "Contact"
+		},
+		"locale": {
+			"current": "EN",
+			"switch": "ID"
+		},
+		"cta": {
+			"consultation": "Free Consultation",
+			"consult": "Consult Now"
+		}
+	},
+	"hero": {
+		"title": "Professional Language Services",
+		"subtitle": "Explore our services",
+		"description": "We provide direct personal consultation. Two-way communication makes every process more personal. We also appreciate your time!",
+		"cta": {
+			"primary": "Get Started",
+			"secondary": "Learn More"
+		}
+	},
+	"services": {
+		"title": "Our Services",
+		"subtitle": "Complete language solutions for your needs",
+		"items": {
+			"translation": {
+				"title": "Translation",
+				"description": "Professional document translation services"
+			},
+			"proofreading": {
+				"title": "Proofreading",
+				"description": "Thorough proofreading and editing services"
+			},
+			"swornTranslation": {
+				"title": "Sworn Translation",
+				"description": "Certified sworn translation services"
+			},
+			"transcription": {
+				"title": "Transcription",
+				"description": "Audio and video transcription services"
+			},
+			"captionInstagram": {
+				"title": "Instagram Caption",
+				"description": "Creative and engaging Instagram captions"
+			},
+			"englishCourse": {
+				"title": "English Course",
+				"description": "Comprehensive English learning programs"
+			},
+			"bipaClass": {
+				"title": "BIPA Class",
+				"description": "Indonesian language classes for foreigners"
+			},
+			"subtitling": {
+				"title": "Subtitling",
+				"description": "Video subtitling and captioning services"
+			},
+			"typing": {
+				"title": "Typing",
+				"description": "Professional typing and data entry"
+			},
+			"formatting": {
+				"title": "Formatting",
+				"description": "Professional document layout and formatting"
+			},
+			"pptLayouting": {
+				"title": "PPT Layouting",
+				"description": "PowerPoint design and layout services"
+			}
+		}
+	},
+	"about": {
+		"title": "About SAE",
+		"subtitle": "Your trusted language partner",
+		"description": "We are committed to providing high-quality language services with personal touch and professional excellence.",
+		"features": {
+			"personal": {
+				"title": "Personal Consultation",
+				"description": "Direct communication for better understanding"
+			},
+			"quality": {
+				"title": "Quality Assurance",
+				"description": "Professional standards in every project"
+			},
+			"timely": {
+				"title": "Timely Delivery",
+				"description": "We respect your time and deadlines"
+			}
+		}
+	},
+	"contact": {
+		"title": "Contact Us",
+		"subtitle": "Get in touch for your language needs",
+		"form": {
+			"name": {
+				"label": "Full Name",
+				"placeholder": "Enter your full name"
+			},
+			"email": {
+				"label": "Email Address",
+				"placeholder": "Enter your email address"
+			},
+			"phone": {
+				"label": "Phone Number",
+				"placeholder": "Enter your phone number"
+			},
+			"service": {
+				"label": "Service Needed",
+				"placeholder": "Select a service"
+			},
+			"message": {
+				"label": "Message",
+				"placeholder": "Tell us about your project"
+			},
+			"submit": "Send Message",
+			"sending": "Sending...",
+			"success": "Message sent successfully!",
+			"error": "Failed to send message. Please try again."
+		},
+		"info": {
+			"address": {
+				"title": "Address",
+				"value": "Your Business Address"
+			},
+			"phone": {
+				"title": "Phone",
+				"value": "+62 xxx xxxx xxxx"
+			},
+			"email": {
+				"title": "Email",
+				"value": "info@sae.com"
+			},
+			"hours": {
+				"title": "Business Hours",
+				"value": "Monday - Friday: 9:00 AM - 6:00 PM"
+			}
+		}
+	},
+	"footer": {
+		"brand": "SAE",
+		"tagline": "Professional Language Services",
+		"quickLinks": {
+			"title": "Quick Links",
+			"items": {
+				"home": "Home",
+				"about": "About",
+				"services": "Services",
+				"contact": "Contact",
+				"privacy": "Privacy Policy",
+				"terms": "Terms of Service"
+			}
+		},
+		"services": {
+			"title": "Services",
+			"items": {
+				"translation": "Translation",
+				"proofreading": "Proofreading",
+				"transcription": "Transcription",
+				"courses": "Language Courses"
+			}
+		},
+		"contact": {
+			"title": "Contact Info",
+			"address": "Your Business Address",
+			"phone": "+62 xxx xxxx xxxx",
+			"email": "info@sae.com"
+		},
+		"social": {
+			"title": "Follow Us",
+			"facebook": "Facebook",
+			"instagram": "Instagram",
+			"twitter": "Twitter",
+			"linkedin": "LinkedIn"
+		},
+		"copyright": "© 2025 SAE. All rights reserved."
+	},
+	"seo": {
+		"home": {
+			"title": "SAE - Professional Language Services",
+			"description": "Expert translation, proofreading, and language courses. Personal consultation and quality guaranteed.",
+			"keywords": "translation, proofreading, language services, English course, BIPA"
+		},
+		"about": {
+			"title": "About SAE - Professional Language Partners",
+			"description": "Learn about our commitment to quality language services and personal customer care.",
+			"keywords": "about SAE, language services, professional translation"
+		},
+		"services": {
+			"title": "Language Services - Translation, Courses & More",
+			"description": "Complete range of language services including translation, proofreading, courses, and specialized services.",
+			"keywords": "translation services, English course, BIPA, proofreading, transcription"
+		},
+		"contact": {
+			"title": "Contact SAE - Get Your Free Consultation",
+			"description": "Contact us for professional language services. Free consultation available.",
+			"keywords": "contact SAE, language services consultation, translation quote"
+		}
+	},
+	"validation": {
+		"required": "This field is required",
+		"email": "Please enter a valid email address",
+		"phone": "Please enter a valid phone number",
+		"minLength": "Minimum {count} characters required",
+		"maxLength": "Maximum {count} characters allowed"
+	},
+	"status": {
+		"online": "Online",
+		"offline": "Offline",
+		"busy": "Busy",
+		"available": "Available for consultation"
 	}
 }

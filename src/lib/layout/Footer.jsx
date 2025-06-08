@@ -36,7 +36,9 @@ const FooterPublic = () => {
 			{/* Copyright */}
 			<div className="max-w-[1440px] text-sm px-6 w-full space-y-6">
 				<div className="border-t border-neutral-50 w-full" />
-				<div className="text-center">© 2025 SAE. All rights reserved</div>
+				<div className="text-center md:text-start">
+					© 2025 SAE. All rights reserved
+				</div>
 			</div>
 		</div>
 	);

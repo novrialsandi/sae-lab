@@ -1,5 +1,6 @@
 import React from "react";
 import { icons } from "../icons/iconSvg";
+import { Facebook, Twitter, Instagram } from "lucide-react";
 
 const FooterPublic = () => {
 	return (
@@ -25,9 +26,26 @@ const FooterPublic = () => {
 					<div className="space-y-6">
 						<div className="text-lg font-bold">Follow Us</div>
 						<div className="space-y-4">
-							<div>Facebook</div>
-							<div>Twitter</div>
-							<div>Instagram</div>
+							<a
+								href="#"
+								className="flex items-center gap-2 hover:text-white/80 transition"
+							>
+								<Facebook className="w-5 h-5" />
+								Facebook
+							</a>
+							<a
+								href="#"
+								className="flex items-center gap-2 hover:text-white/80 transition"
+							>
+								<Twitter className="w-5 h-5" />X
+							</a>
+							<a
+								href="#"
+								className="flex items-center gap-2 hover:text-white/80 transition"
+							>
+								<Instagram className="w-5 h-5" />
+								Instagram
+							</a>
 						</div>
 					</div>
 				</div>

@@ -79,7 +79,7 @@ const HeaderPublic = () => {
 
 	return (
 		<nav
-			className="fixed top-0 w-full z-50 bg-white ease-in-out flex justify-center items-center"
+			className="fixed top-0 w-full z-50 border-b border-neutral-200 bg-white ease-in-out flex justify-center items-center"
 			onMouseLeave={handleMouseLeave}
 		>
 			<div className="flex justify-between w-full  max-w-[1440px] items-center px-6 py-4 relative">

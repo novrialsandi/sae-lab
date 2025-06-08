@@ -81,7 +81,7 @@ const TextInput = ({
 				<label
 					suppressHydrationWarning
 					htmlFor={id}
-					className="flex items-center"
+					className="flex items-center text-gray-700"
 				>
 					{label}
 					{isRequired && <span className="ml-1 font-bold text-red-400">*</span>}

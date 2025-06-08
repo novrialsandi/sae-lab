@@ -96,7 +96,7 @@ const HeaderPublic = () => {
 								href={val.href}
 								className={`cursor-pointer ${
 									`/${pathname.split("/")[2]}` === val.href
-										? "text-primary"
+										? "text-primary font-bold"
 										: isScroll || activeDropdown === index
 										? "text-gray-800 hover:text-primary"
 										: "hover:text-primary"

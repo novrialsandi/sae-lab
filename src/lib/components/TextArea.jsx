@@ -57,7 +57,7 @@ const TextArea = ({
 				<label
 					suppressHydrationWarning
 					htmlFor={id}
-					className="flex items-center text-page-title/7-medium text-text/light"
+					className="flex  text-gray-700 items-center text-page-title/7-medium text-text/light"
 				>
 					{label}
 					{isRequired && <span className="ml-1 font-bold text-red-400">*</span>}

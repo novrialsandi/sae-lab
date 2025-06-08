@@ -1,28 +1,33 @@
 "use client";
 
 import React, { useState, useRef, useEffect, useCallback } from "react";
-import { iconSvg } from "../Icons/icon";
+import { MdArrowDropDown, MdSearch, MdClear } from "react-icons/md";
 
 const Dropdown = ({
 	label = "",
-	popupTopPosition = 90,
+	popupTopPosition = 80,
 	popupPosition = "left",
 	disabled = false,
 	popupZIndexClass = "z-10",
 	popupStyle = {},
 	btnToggleClass = "",
 	placeholder = "Select Value",
+	searchPlaceholder = "Search items...",
 	items = [],
 	onStateChange = () => {},
 	type = "single",
 	hint = "",
 	defaultValue = "",
 	maxWidth = "1200px",
+	enableSearch = false,
 }) => {
 	const [multipleSelectedItems, setMultipleSelectedItems] = useState([]);
 	const [singleSelectedItem, setSingleSelectedItem] = useState("");
 	const [isOpen, setIsOpen] = useState(false);
+	const [searchValue, setSearchValue] = useState("");
+	const [filteredItems, setFilteredItems] = useState(items);
 	const wrapperRef = useRef(null);
+	const searchInputRef = useRef(null);
 
 	// Initialize default values
 	useEffect(() => {
@@ -39,11 +44,38 @@ const Dropdown = ({
 		}
 	}, [defaultValue, items, type]);
 
+	// Update filtered items when search value or items change
+	useEffect(() => {
+		if (!enableSearch) {
+			setFilteredItems(items);
+			return;
+		}
+
+		if (!searchValue.trim()) {
+			setFilteredItems(items);
+		} else {
+			const filtered = items.filter((item) =>
+				item.label.toLowerCase().includes(searchValue.toLowerCase())
+			);
+			setFilteredItems(filtered);
+		}
+	}, [searchValue, items, enableSearch]);
+
+	// Focus search input when dropdown opens
+	useEffect(() => {
+		if (isOpen && enableSearch && searchInputRef.current) {
+			setTimeout(() => {
+				searchInputRef.current?.focus();
+			}, 100);
+		}
+	}, [isOpen, enableSearch]);
+
 	// Close the dropdown when clicking outside
 	useEffect(() => {
 		const handleClickOutside = (event) => {
 			if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
 				setIsOpen(false);
+				setSearchValue("");
 			}
 		};
 
@@ -60,6 +92,7 @@ const Dropdown = ({
 				setSingleSelectedItem(item.label);
 				onStateChange(item.value);
 				setIsOpen(false);
+				setSearchValue("");
 			} else if (type === "multi") {
 				const isAlreadySelected = multipleSelectedItems.some(
 					(selectedItem) => selectedItem.value === item.value
@@ -75,24 +108,29 @@ const Dropdown = ({
 				onStateChange(updatedItems.map((item) => item.value));
 			}
 		},
-		[
-			multipleSelectedItems,
-			setSingleSelectedItem,
-			setMultipleSelectedItems,
-			onStateChange,
-			type,
-		]
+		[multipleSelectedItems, onStateChange, type]
 	);
+
+	// Handle search input change
+	const handleSearchChange = (e) => {
+		setSearchValue(e.target.value);
+	};
+
+	// Clear search
+	const clearSearch = () => {
+		setSearchValue("");
+		searchInputRef.current?.focus();
+	};
 
 	return (
 		<div
 			ref={wrapperRef}
-			className="relative bg-white border border-black/10 active:border focus:border rounded-lg flex w-full flex-col gap-2"
+			className="relative bg-white  flex w-full flex-col gap-1"
 		>
-			{label && <span className="">{label}</span>}
+			{label && <span className=" text-gray-700">{label}</span>}
 			<button
 				disabled={disabled}
-				className={`${btnToggleClass} p-2`}
+				className={`${btnToggleClass} h-12 px-4 border border-black/10 active:border focus:border rounded-lg`}
 				onClick={(e) => {
 					e.stopPropagation();
 					setIsOpen(!isOpen);
@@ -103,26 +141,31 @@ const Dropdown = ({
 						className={`${
 							!singleSelectedItem &&
 							!multipleSelectedItems.length &&
-							!defaultValue
-								? "text-icon/disabled"
-								: "text-text/light"
+							!(Array.isArray(defaultValue)
+								? defaultValue.length > 0
+								: defaultValue)
+								? "text-gray-500"
+								: "text-gray-700"
 						}`}
 					>
-						{!singleSelectedItem && !multipleSelectedItems.length
-							? defaultValue
-								? defaultValue
-								: placeholder
+						{!singleSelectedItem &&
+						!multipleSelectedItems.length &&
+						!(Array.isArray(defaultValue)
+							? defaultValue.length > 0
+							: defaultValue)
+							? placeholder
 							: type === "single"
 							? singleSelectedItem
 							: `${multipleSelectedItems.length} Selected`}
 					</span>
+
 					<span
 						style={{
 							transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
 							transition: "transform 0.15s ease",
 						}}
 					>
-						{iconSvg.arrowDownSvg}
+						<MdArrowDropDown />
 					</span>
 				</div>
 			</button>
@@ -133,9 +176,18 @@ const Dropdown = ({
 					{multipleSelectedItems.map((item, index) => (
 						<div
 							key={index}
-							className="bg-primary text-secondary rounded-md px-3 py-1 text-sm flex items-center gap-2"
+							className="bg-green-500 text-white rounded-md px-3 py-1 text-sm flex items-center gap-2"
 						>
 							<span>{item.label}</span>
+							<button
+								onClick={(e) => {
+									e.stopPropagation();
+									onSelectItem(item);
+								}}
+								className="hover:bg-green-600 rounded-full p-1 -mr-1"
+							>
+								<MdClear size={12} />
+							</button>
 						</div>
 					))}
 				</div>
@@ -144,43 +196,78 @@ const Dropdown = ({
 			{/* Dropdown Items */}
 			{isOpen && (
 				<div
-					className={` absolute h-fit max-h-[122px] w-full min-w-[140px] max-w-[${maxWidth}] overflow-auto rounded-lg border border-black/10 shadow-lg ${popupZIndexClass} ${
+					className={`absolute h-fit max-h-[300px] w-full min-w-[140px] max-w-[${maxWidth}] overflow-hidden rounded-lg border border-black/10 shadow-lg ${popupZIndexClass} ${
 						popupPosition === "right" ? "right-0" : "left-0"
 					}`}
 					style={{
-						top: `44px`,
+						top: `${popupTopPosition}px`,
 						...popupStyle,
 					}}
 				>
-					<div className="no-scrollbar bg-white relative w-full overflow-y-scroll rounded-lg">
-						<div className="no-scrollbar flex h-full flex-col overflow-y-scroll text-text/light dark:text-text/light">
-							{items && items.length ? (
-								items.map((item, index) => {
-									const isSelected =
-										type === "multi"
-											? multipleSelectedItems.some(
-													(selectedItem) => selectedItem.value === item.value
-											  )
-											: singleSelectedItem === item.label;
-
-									return (
+					<div className="bg-white relative w-full rounded-lg">
+						{/* Search Input */}
+						{enableSearch && (
+							<div className="p-2 border-b border-gray-200 sticky top-0 bg-white">
+								<div className="relative">
+									<MdSearch
+										className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+										size={16}
+									/>
+									<input
+										ref={searchInputRef}
+										type="text"
+										value={searchValue}
+										onChange={handleSearchChange}
+										placeholder={searchPlaceholder}
+										className="w-full pl-9 pr-8 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+									/>
+									{searchValue && (
 										<button
-											className={`flex gap-2 p-2 rounded-md hover:bg-gray-100`}
-											key={index}
-											onClick={() => onSelectItem(item)}
+											onClick={clearSearch}
+											className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
 										>
-											{item.label}
-											{isSelected && (
-												<span className="ml-auto text-sm text-black">
-													&#10003;
-												</span>
-											)}
+											<MdClear size={16} />
 										</button>
-									);
-								})
-							) : (
-								<span className="p-2">No Value to select</span>
-							)}
+									)}
+								</div>
+							</div>
+						)}
+
+						{/* Items List */}
+						<div className="max-h-[240px] overflow-y-auto">
+							<div className="flex h-full flex-col text-gray-700">
+								{filteredItems && filteredItems.length ? (
+									filteredItems.map((item, index) => {
+										const isSelected =
+											type === "multi"
+												? multipleSelectedItems.some(
+														(selectedItem) => selectedItem.value === item.value
+												  )
+												: singleSelectedItem === item.label;
+
+										return (
+											<button
+												className={`flex items-center gap-2 h-12 px-4 hover:bg-gray-100 text-left ${
+													isSelected ? "bg-green-50" : ""
+												}`}
+												key={index}
+												onClick={() => onSelectItem(item)}
+											>
+												<span className="flex-1">{item.label}</span>
+												{isSelected && (
+													<span className="text-green-500 font-semibold">
+														✓
+													</span>
+												)}
+											</button>
+										);
+									})
+								) : (
+									<div className="p-3 text-gray-500 text-center">
+										{searchValue ? "No items found" : "No items to select"}
+									</div>
+								)}
+							</div>
 						</div>
 					</div>
 				</div>

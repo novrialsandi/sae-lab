@@ -6,8 +6,11 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ChevronDown } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const HeaderPublic = () => {
+	const pathname = usePathname();
+
 	const tNavbar = useTranslations("navbar");
 	const tServices = useTranslations("services");
 
@@ -50,7 +53,7 @@ const HeaderPublic = () => {
 				})),
 			},
 		},
-		{ key: "contact", href: "/" },
+		{ key: "contact", href: "/contact" },
 	];
 
 	useEffect(() => {
@@ -76,10 +79,10 @@ const HeaderPublic = () => {
 
 	return (
 		<nav
-			className={`fixed top-0 w-full z-50  bg-white shadow-md  ease-in-out `}
+			className="fixed top-0 w-full z-50 bg-white ease-in-out flex justify-center items-center"
 			onMouseLeave={handleMouseLeave}
 		>
-			<div className="flex justify-between items-center px-6 py-4 relative">
+			<div className="flex justify-between w-full  max-w-[1440px] items-center px-6 py-4 relative">
 				<Link href={"/"}>{icons.iconLogo}</Link>
 
 				<div className="flex gap-8 relative">
@@ -92,9 +95,11 @@ const HeaderPublic = () => {
 							<Link
 								href={val.href}
 								className={`cursor-pointer ${
-									isScroll || activeDropdown === index
-										? "text-gray-800 hover:text-blue-600"
-										: "hover:text-blue-200"
+									`/${pathname.split("/")[2]}` === val.href
+										? "text-primary"
+										: isScroll || activeDropdown === index
+										? "text-gray-800 hover:text-primary"
+										: "hover:text-primary"
 								} ${val.subMenu ? "flex items-center gap-1" : ""}`}
 							>
 								{tNavbar(`menu.${val.key}`)}
@@ -124,7 +129,7 @@ const HeaderPublic = () => {
 					style={{ top: "100%" }}
 					onMouseLeave={() => setActiveDropdown(null)}
 				>
-					<div className="container mx-auto px-6 py-8">
+					<div className="container max-w-[1440px] mx-auto px-6 py-8">
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 							{menus[activeDropdown].subMenu.items.map((subItem, subIndex) => (
 								<Link

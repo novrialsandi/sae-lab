@@ -1,3 +1,4 @@
+import FooterPublic from "./Footer";
 import Header from "./Header";
 
 const PublicLayout = ({ children }) => {
@@ -6,6 +7,7 @@ const PublicLayout = ({ children }) => {
 			<div className="relative w-full pt-16">
 				<Header />
 				{children}
+				<FooterPublic />
 			</div>
 		</div>
 	);

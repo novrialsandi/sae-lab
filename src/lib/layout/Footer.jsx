@@ -4,7 +4,7 @@ import { Facebook, Twitter, Instagram } from "lucide-react";
 
 const FooterPublic = () => {
 	return (
-		<div className="w-full space-y-20 pt-20 pb-8 text-neutral-50  bg-primary flex flex-col items-center">
+		<div className="w-full space-y-20 pt-12 pb-8 text-neutral-50  bg-primary flex flex-col items-center">
 			<div className="w-full max-w-[1440px] px-6 flex flex-col md:flex-row md:justify-between gap-10">
 				{/* Left section */}
 				<div className="max-w-64 text-neutral-50 text-lg space-y-6">

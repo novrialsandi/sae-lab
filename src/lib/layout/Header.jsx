@@ -74,6 +74,8 @@ const HeaderPublic = () => {
 	const handleMouseEnter = (index) => {
 		if (menus[index].subMenu) {
 			setActiveDropdown(index);
+		} else {
+			setActiveDropdown(null);
 		}
 	};
 
@@ -121,7 +123,7 @@ const HeaderPublic = () => {
 					))}
 				</div>
 
-				<div className="flex gap-2 w-64 justify-end">
+				<div className="flex gap-4 w-64 justify-end">
 					<Dropdown
 						popupZIndexClass="z-50"
 						onStateChange={(e) => {

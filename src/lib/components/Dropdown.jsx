@@ -147,7 +147,7 @@ const Dropdown = ({
 			>
 				<div className={`flex ${width} items-center justify-between gap-2`}>
 					<span
-						className={`${
+						className={`text-nowrap ${
 							!singleSelectedItem &&
 							!multipleSelectedItems.length &&
 							!(Array.isArray(defaultValue)

@@ -5,6 +5,7 @@ import { MdArrowDropDown, MdSearch, MdClear } from "react-icons/md";
 
 const Dropdown = ({
 	label = "",
+	size = "medium",
 	popupTopPosition = 80,
 	popupPosition = "left",
 	disabled = false,
@@ -20,6 +21,7 @@ const Dropdown = ({
 	defaultValue = "",
 	maxWidth = "1200px",
 	enableSearch = false,
+	width = "w-full",
 }) => {
 	const [multipleSelectedItems, setMultipleSelectedItems] = useState([]);
 	const [singleSelectedItem, setSingleSelectedItem] = useState("");
@@ -122,21 +124,27 @@ const Dropdown = ({
 		searchInputRef.current?.focus();
 	};
 
+	const sizeDataClass = {
+		small: "h-10",
+		medium: "h-12",
+		large: "h-[60px]",
+	};
+
 	return (
 		<div
 			ref={wrapperRef}
-			className="relative bg-white  flex w-full flex-col gap-1"
+			className={`relative bg-white  flex ${width} flex-col gap-1`}
 		>
 			{label && <span className=" text-gray-700">{label}</span>}
 			<button
 				disabled={disabled}
-				className={`${btnToggleClass} h-12 px-4 border border-black/10 active:border focus:border rounded-lg`}
+				className={`${btnToggleClass} ${sizeDataClass[size]} px-3 border border-neutral-300 active:border focus:border rounded-lg`}
 				onClick={(e) => {
 					e.stopPropagation();
 					setIsOpen(!isOpen);
 				}}
 			>
-				<div className="flex w-full items-center justify-between gap-2">
+				<div className={`flex ${width} items-center justify-between gap-2`}>
 					<span
 						className={`${
 							!singleSelectedItem &&
@@ -196,7 +204,7 @@ const Dropdown = ({
 			{/* Dropdown Items */}
 			{isOpen && (
 				<div
-					className={`absolute h-fit max-h-[300px] w-full min-w-[140px] max-w-[${maxWidth}] overflow-hidden rounded-lg border border-black/10 shadow-lg ${popupZIndexClass} ${
+					className={`absolute h-fit max-h-[300px] ${width}  max-w-[${maxWidth}] overflow-hidden rounded-lg border border-black/10 shadow-lg ${popupZIndexClass} ${
 						popupPosition === "right" ? "right-0" : "left-0"
 					}`}
 					style={{
@@ -247,7 +255,7 @@ const Dropdown = ({
 
 										return (
 											<button
-												className={`flex items-center gap-2 h-12 px-4 hover:bg-gray-100 text-left ${
+												className={`flex items-center gap-1 h-12 px-4 hover:bg-gray-100 text-left ${
 													isSelected ? "bg-green-50" : ""
 												}`}
 												key={index}

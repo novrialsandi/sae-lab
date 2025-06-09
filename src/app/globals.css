@@ -6,6 +6,12 @@
 	--color-accent-primary: #005bac;
 	--color-accent-secondary: #ffc100;
 	--font-sans: "Open Sans", ui-sans-serif, system-ui;
+	--background-image-custom: linear-gradient(
+		to top right,
+		#cfe3e8 5%,
+		white 30%,
+		white 95%
+	);
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -22,4 +28,10 @@ input::-webkit-inner-spin-button {
 .no-scrollbar {
 	-ms-overflow-style: none;
 	scrollbar-width: none;
+}
+
+@layer utilities {
+	.bg-hover {
+		@apply bg-gradient-to-b from-white via-white to-[#CFE3E8] shadow-[0px_4px_24px_rgba(47,47,47,0.1)];
+	}
 }

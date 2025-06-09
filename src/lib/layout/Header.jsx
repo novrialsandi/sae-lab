@@ -3,13 +3,16 @@
 import Button from "@/lib/components/Button";
 import { icons } from "../icons/iconSvg";
 import { useEffect, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ChevronDown } from "lucide-react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import Dropdown from "../components/Dropdown";
 
 const HeaderPublic = () => {
 	const pathname = usePathname();
+	const locale = useLocale();
+	const router = useRouter();
 
 	const tNavbar = useTranslations("navbar");
 	const tServices = useTranslations("services");
@@ -39,6 +42,7 @@ const HeaderPublic = () => {
 					key,
 					title: tServices(`items.${key}.title`),
 					description: tServices(`items.${key}.description`),
+					img: `/header/${key}.png`,
 					href: `/service/${
 						key === "swornTranslation"
 							? "sworn-translation"
@@ -83,7 +87,9 @@ const HeaderPublic = () => {
 			onMouseLeave={handleMouseLeave}
 		>
 			<div className="flex justify-between w-full  max-w-[1440px] items-center px-6 py-4 relative">
-				<Link href={"/"}>{icons.iconLogo}</Link>
+				<Link className="w-64" href={"/"}>
+					{icons.iconLogo}
+				</Link>
 
 				<div className="flex gap-8 relative">
 					{menus.map((val, index) => (
@@ -115,71 +121,72 @@ const HeaderPublic = () => {
 					))}
 				</div>
 
-				<div>{icons.iconLogo}</div>
+				<div className="flex gap-2 w-64 justify-end">
+					<Dropdown
+						popupZIndexClass="z-50"
+						onStateChange={(e) => {
+							const newPathname = pathname.replace(`/${locale}`, `/${e}`);
+							router.push(newPathname);
+						}}
+						defaultValue={locale}
+						width=""
+						popupTopPosition={50}
+						size="small"
+						items={[
+							{
+								label: "🇮🇩 ID",
+								value: "id",
+							},
+							{
+								label: "🇬🇧 EN",
+								value: "en",
+							},
+						]}
+					/>
+					<Button size="small" className="p-3 rounded-lg">
+						{tNavbar("cta.consultation")}
+					</Button>
+				</div>
 			</div>
 
 			{/* Full-width dropdown */}
 			{activeDropdown !== null && menus[activeDropdown].subMenu && (
 				<div
-					className={`absolute left-0 w-full transition-all ease-in-out transform z-50 ${
+					className={`absolute left-0 bg-custom w-full transition-all ease-in-out transform z-40 ${
 						activeDropdown !== null
 							? "opacity-100 translate-y-0"
 							: "opacity-0 -translate-y-2"
-					} ${isScroll ? "bg-white shadow-md border-t" : "bg-white shadow-md"}`}
+					} ${isScroll ? "bg-white shadow-md" : "bg-white shadow-md"}`}
 					style={{ top: "100%" }}
 					onMouseLeave={() => setActiveDropdown(null)}
 				>
-					<div className="container max-w-[1440px] mx-auto px-6 py-8">
+					<div className="container max-w-[1440px]  flex gap-4 justify-between mx-auto px-6 py-8">
+						<div className="space-y-2">
+							<div className="text-xl font-semibold">{tServices("title")}</div>
+							<div>{tServices("subtitle")}</div>
+						</div>
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 							{menus[activeDropdown].subMenu.items.map((subItem, subIndex) => (
 								<Link
 									key={subIndex}
 									href={subItem.href}
-									className="group block p-4 rounded-lg hover:bg-gray-50 transition-colors"
+									className="group block p-3 hover:bg-custom transition duration-300 rounded-lg w-60 border border-neutral-100"
 								>
-									<div className="flex items-start gap-3">
-										<div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-blue-200 transition-colors">
-											<svg
-												className="w-4 h-4 text-blue-600"
-												fill="none"
-												stroke="currentColor"
-												viewBox="0 0 24 24"
-											>
-												<path
-													strokeLinecap="round"
-													strokeLinejoin="round"
-													strokeWidth={2}
-													d="M13 10V3L4 14h7v7l9-11h-7z"
-												/>
-											</svg>
+									<div className="flex items-center w-full  gap-3">
+										<div className="w-8 h-8">
+											<img src={subItem.img} alt="" />
 										</div>
 										<div>
-											<h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+											<h3 className="font-semibold text-nowrap ">
 												{subItem.title}
 											</h3>
-											<p className="text-sm text-gray-500 mt-1 leading-relaxed">
+											{/* <p className="text-sm text-gray-500 mt-1 leading-relaxed">
 												{subItem.description}
-											</p>
+											</p> */}
 										</div>
 									</div>
 								</Link>
 							))}
-						</div>
-
-						<div className="mt-8 pt-6 border-t border-gray-200">
-							<div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-								<div>
-									<h4 className="font-semibold text-gray-900">
-										Need a custom solution?
-									</h4>
-									<p className="text-sm text-gray-500">
-										Let's discuss your specific requirements
-									</p>
-								</div>
-								<button className="bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700 transition">
-									Get Started
-								</button>
-							</div>
 						</div>
 					</div>
 				</div>

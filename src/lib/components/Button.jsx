@@ -7,7 +7,7 @@ const Button = ({
 	size = "medium", // small, medium, large
 }) => {
 	const sizeDataClass = {
-		small: "h-8",
+		small: "h-10",
 		medium: "h-12",
 		large: "h-[60px]",
 	};

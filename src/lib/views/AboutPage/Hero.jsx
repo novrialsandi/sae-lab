@@ -9,7 +9,7 @@ const HeroAbout = () => {
 	];
 
 	return (
-		<div className="w-full flex flex-col items-center justify-center bg-from-top min-h-svh">
+		<div className="w-full flex flex-col items-center justify-center bg-from-top min-h-svh py-24">
 			<motion.div
 				initial={{ opacity: 0, y: 30 }}
 				animate={{ opacity: 1, y: 0 }}

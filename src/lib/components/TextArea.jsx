@@ -52,12 +52,12 @@ const TextArea = ({
 	};
 
 	return (
-		<div className={`${isFullwidth ? "w-full" : ""} flex flex-col space-y-2`}>
+		<div className={`${isFullwidth ? "w-full" : ""} flex flex-col `}>
 			{label && (
 				<label
 					suppressHydrationWarning
 					htmlFor={id}
-					className="flex  text-gray-700 items-center text-page-title/7-medium text-text/light"
+					className="flex  text-gray-700 items-center"
 				>
 					{label}
 					{isRequired && <span className="ml-1 font-bold text-red-400">*</span>}
@@ -80,7 +80,7 @@ const TextArea = ({
 					rows={4}
 					onKeyDown={onKeyDown}
 					onChange={handleChange}
-					className={`flex w-full items-center rounded-lg border border-[#eeeeee] py-1.5 font-normal outline-0 focus:border-active focus:ring-0 hover:border-[#333333] focus:border-primary ${className} ${
+					className={`flex w-full items-center rounded-lg border border-gray-300 py-1.5 font-normal outline-0 focus:border-active focus:ring-0 hover:border-[#333333] focus:border-primary ${className} ${
 						errorMsg ? "border-error text-error" : ""
 					} ${hasIconLeft ? "pl-12" : "pl-4"} ${
 						hasIconRight ? "pr-10" : "pr-4"

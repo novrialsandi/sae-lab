@@ -1,5 +1,6 @@
 "use client";
 
+import { ChevronDown } from "lucide-react";
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { MdArrowDropDown, MdSearch, MdClear } from "react-icons/md";
 
@@ -138,7 +139,7 @@ const Dropdown = ({
 			{label && <span className=" text-gray-700">{label}</span>}
 			<button
 				disabled={disabled}
-				className={`${btnToggleClass} ${sizeDataClass[size]} px-3 border border-neutral-300 active:border focus:border rounded-lg`}
+				className={`${btnToggleClass} ${sizeDataClass[size]} px-3 border border-gray-300 active:border focus:border rounded-lg`}
 				onClick={(e) => {
 					e.stopPropagation();
 					setIsOpen(!isOpen);
@@ -173,7 +174,11 @@ const Dropdown = ({
 							transition: "transform 0.15s ease",
 						}}
 					>
-						<MdArrowDropDown />
+						<ChevronDown
+							className={`w-4 h-4 transition-transform ${
+								isOpen ? "rotate-180" : ""
+							}`}
+						/>
 					</span>
 				</div>
 			</button>

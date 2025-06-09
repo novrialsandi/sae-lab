@@ -6,11 +6,17 @@
 	--color-accent-primary: #005bac;
 	--color-accent-secondary: #ffc100;
 	--font-sans: "Open Sans", ui-sans-serif, system-ui;
-	--background-image-custom: linear-gradient(
+	--background-image-from-bot: linear-gradient(
 		to top right,
 		#cfe3e8 5%,
 		white 30%,
 		white 95%
+	);
+	--background-image-from-top: linear-gradient(
+		to bottom left,
+		#a7ced5 15%,
+		#e9f2f5 30%,
+		#ffffff 85%
 	);
 }
 

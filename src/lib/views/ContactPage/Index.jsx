@@ -8,8 +8,8 @@ import Dropdown from "@/lib/components/Dropdown";
 
 const ContactComponent = () => {
 	return (
-		<div className="w-full flex flex-col items-center">
-			<div className="w-full max-w-[1440px] px-4 sm:px-6 py-10 sm:py-20 flex flex-col lg:flex-row gap-8 lg:gap-12 lg:justify-between">
+		<div className="w-full flex flex-col items-center py-10 sm:py-40">
+			<div className="w-full max-w-[1440px] px-4 sm:px-6  flex flex-col lg:flex-row gap-8 lg:gap-12 lg:justify-between">
 				<div className="w-full lg:w-1/2 flex flex-col justify-center gap-6 order-2 lg:order-1">
 					<div className="space-y-2 text-center lg:text-left">
 						<div className="text-3xl sm:text-4xl font-semibold text-neutral-800">

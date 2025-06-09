@@ -21,7 +21,7 @@ const HeaderPublic = () => {
 	const [activeDropdown, setActiveDropdown] = useState(null);
 
 	const menus = [
-		{ key: "about", href: "/" },
+		{ key: "about", href: "/about" },
 		{
 			key: "services",
 			href: "/",
@@ -152,7 +152,7 @@ const HeaderPublic = () => {
 			{/* Full-width dropdown */}
 			{activeDropdown !== null && menus[activeDropdown].subMenu && (
 				<div
-					className={`absolute left-0 bg-custom w-full transition-all ease-in-out transform z-40 ${
+					className={`absolute left-0 bg-from-bot w-full transition-all ease-in-out transform z-40 ${
 						activeDropdown !== null
 							? "opacity-100 translate-y-0"
 							: "opacity-0 -translate-y-2"
@@ -165,12 +165,12 @@ const HeaderPublic = () => {
 							<div className="text-xl font-semibold">{tServices("title")}</div>
 							<div>{tServices("subtitle")}</div>
 						</div>
-						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 lg:gap-6 gap-4">
 							{menus[activeDropdown].subMenu.items.map((subItem, subIndex) => (
 								<Link
 									key={subIndex}
 									href={subItem.href}
-									className="group block p-3 hover:bg-custom transition duration-300 rounded-lg w-60 border border-neutral-100"
+									className="group block p-3 hover:bg-from-bot transition duration-300 rounded-lg  border border-neutral-100"
 								>
 									<div className="flex items-center w-full  gap-3">
 										<div className="w-8 h-8">

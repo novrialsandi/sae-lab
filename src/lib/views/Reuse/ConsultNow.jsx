@@ -1,7 +1,6 @@
-import Star from "@/lib/components/Star";
 import { motion, AnimatePresence } from "framer-motion";
 
-const WhyUs = () => {
+const ConsultNow = () => {
 	const whyDetail = [
 		{
 			title: "Profesional & Berpengalaman",
@@ -25,9 +24,6 @@ const WhyUs = () => {
 
 	return (
 		<div className="w-full relative flex flex-col items-center justify-center min-h-screen py-8 md:py-24">
-			<Star size="size-14" className="absolute top-[20%] right-[20%]" />
-			<Star size="size-20" className="absolute  top-[32%] left-[20%]" />
-			<Star size="size-20" className="absolute  bottom-[5%] right-[40%]" />
 			<AnimatePresence mode="wait">
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}
@@ -36,28 +32,27 @@ const WhyUs = () => {
 					transition={{ duration: 1, ease: "easeOut" }}
 					className="w-full z-10 max-w-[1440px]  px-4 sm:px-6 flex flex-col lg:flex-row gap-8 lg:gap-12 lg:justify-between"
 				>
-					<div className="flex flex-col items-center gap-12">
-						<div className="flex flex-col items-center gap-4">
-							<div className="p-2 px-3 font-bold border border-neutral-300 rounded-2xl text-neutral-500">
-								Why choose us
+					<div className="flex gap-8">
+						<div className="max-w-[494px] space-y-6">
+							<div className="font-semibold text-5xl">
+								Siap Membuat Tulisanmu Lebih Bermakna?
 							</div>
-							<div className="text-4xl font-semibold">Why SAE?</div>
+							<div className="text-xl text-neutral-500">
+								Konsultasikan kebutuhanmu sekarang dan rasakan pengalaman
+								layanan yang personal dan tepat waktu.Kami di sini untuk
+								membantumu menulis dengan lebih baik — dari awal hingga akhir.
+							</div>
 						</div>
-						<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-							{whyDetail.map((val, index) => {
-								return (
-									<div
-										key={index}
-										className="border space-y-8 border-neutral-300 bg-from-bot p-8 rounded-2xl"
-									>
-										<img src={val.img} alt="" />
-										<div className="space-y-4">
-											<div className="text-xl font-semibold">{val.title}</div>
-											<div className="text-[#7D7987]">{val.subtitle}</div>
-										</div>
-									</div>
-								);
-							})}
+						<div className="flex">
+							<div className="">
+								<img src="/about/Frame2.png" alt="" />
+								<img src="/about/Frame3.png" alt="" />
+							</div>
+							<img
+								className="object-contain w-full "
+								src="/about/Frame1.png"
+								alt=""
+							/>
 						</div>
 					</div>
 				</motion.div>
@@ -66,4 +61,4 @@ const WhyUs = () => {
 	);
 };
 
-export default WhyUs;
+export default ConsultNow;

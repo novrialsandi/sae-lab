@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const HeroAbout = () => {
 	const aboutProject = [
-		{ label: "Pengalaman", value: "+9 Tahun" },
-		{ label: "Proyek Selesai", value: "1400" },
+		{ label: "Pengalaman", value: "+9 Thn" },
+		{ label: "Proyek Selesai", value: "1400+" },
 		{ label: "Review Faswork", value: "4.9/5" },
 	];
 
@@ -16,8 +16,8 @@ const HeroAbout = () => {
 				transition={{ duration: 0.6, ease: "easeOut" }}
 				className="w-full max-w-[1440px] px-4 sm:px-6 flex flex-col lg:flex-row gap-8 lg:gap-12 lg:justify-between"
 			>
-				<div className="w-full lg:w-1/2 flex flex-col justify-around gap-6 order-2 lg:order-1">
-					<div className="space-y-2">
+				<div className="max-w-[533px] flex flex-col justify-between gap-6 order-2 lg:order-1">
+					<div className="space-y-4">
 						<div className="text-5xl font-semibold">Tentang Kami</div>
 						<div className="text-lg text-justify">
 							SAE adalah tempat yang tepat untuk memenuhi segala kebutuhan

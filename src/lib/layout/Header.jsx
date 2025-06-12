@@ -89,7 +89,7 @@ const HeaderPublic = () => {
 			onMouseLeave={handleMouseLeave}
 		>
 			<div className="flex justify-between w-full  max-w-[1440px] items-center px-6 py-4 relative">
-				<Link className="w-64" href={"/"}>
+				<Link className="w-72" href={"/"}>
 					{icons.iconLogo}
 				</Link>
 
@@ -123,7 +123,7 @@ const HeaderPublic = () => {
 					))}
 				</div>
 
-				<div className="flex gap-4 w-64 justify-end">
+				<div className="flex gap-4 w-72 justify-end">
 					<Dropdown
 						popupZIndexClass="z-50"
 						onStateChange={(e) => {
@@ -145,7 +145,7 @@ const HeaderPublic = () => {
 							},
 						]}
 					/>
-					<Button size="small" className="p-3 rounded-lg">
+					<Button size="small" className="rounded-lg">
 						{tNavbar("cta.consultation")}
 					</Button>
 				</div>

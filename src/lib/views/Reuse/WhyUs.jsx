@@ -25,9 +25,9 @@ const WhyUs = () => {
 
 	return (
 		<div className="w-full relative flex flex-col items-center justify-center min-h-screen py-8 md:py-24">
-			<Star size="size-14" className="absolute top-[20%] right-[20%]" />
-			<Star size="size-20" className="absolute  top-[32%] left-[20%]" />
-			<Star size="size-20" className="absolute  bottom-[5%] right-[40%]" />
+			<Star size="size-12" className="absolute top-[18%] right-[20%]" />
+			<Star size="size-16" className="absolute  top-[28%] left-[20%]" />
+			<Star size="size-16" className="absolute  bottom-[5%] right-[40%]" />
 			<AnimatePresence mode="wait">
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}
@@ -38,10 +38,11 @@ const WhyUs = () => {
 				>
 					<div className="flex flex-col items-center gap-12">
 						<div className="flex flex-col items-center gap-4">
-							<div className="p-2 px-3 font-bold border border-neutral-300 rounded-2xl text-neutral-500">
-								Why choose us
-							</div>
 							<div className="text-4xl font-semibold">Why SAE?</div>
+							<div className="text-lg text-neutral-500">
+								SAE adalah tempat yang tepat untuk memenuhi segala kebutuhan
+								penulisan Anda.
+							</div>
 						</div>
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 							{whyDetail.map((val, index) => {

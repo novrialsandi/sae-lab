@@ -1,6 +1,6 @@
 import React from "react";
 
-const Star = ({ size = "size-32", className = "" }) => {
+const Star = ({ size = "size-32", className = "", color = "#D6E7EF" }) => {
 	return (
 		<div className={`${size} ${className}`}>
 			<svg
@@ -10,7 +10,7 @@ const Star = ({ size = "size-32", className = "" }) => {
 			>
 				<path
 					d="M50 0 C60 30 70 40 100 50 C70 60 60 70 50 100 C40 70 30 60 0 50 C30 40 40 30 50 0"
-					fill="#D6E7EF"
+					fill={color}
 				/>
 			</svg>
 		</div>

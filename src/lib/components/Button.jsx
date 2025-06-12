@@ -5,6 +5,7 @@ const Button = ({
 	onClick = () => {},
 	children,
 	size = "medium", // small, medium, large
+	isPrimary = true,
 }) => {
 	const sizeDataClass = {
 		small: "h-10",
@@ -23,8 +24,11 @@ const Button = ({
 
 	return (
 		<button
-			className={`min-w-24 ${className}  ${sizeDataClass[size]} text-neutral-50 bg-primary hover:bg-primary/90
-			}  text-nowrap flex items-center justify-center cursor-pointer`}
+			className={`min-w-24 ${className}  ${sizeDataClass[size]} ${
+				isPrimary
+					? "text-[#FCFCFD] bg-primary hover:bg-primary/90"
+					: " border border-primary bg-white text-primary"
+			} font-bold rounded-lg text-nowrap text-sm flex px-4 items-center justify-center cursor-pointer`}
 			disabled={disabled || isLoading}
 			onClick={handleClick}
 		>

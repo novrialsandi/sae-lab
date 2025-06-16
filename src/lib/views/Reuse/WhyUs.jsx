@@ -24,10 +24,9 @@ const WhyUs = () => {
 	];
 
 	return (
-		<div className="w-full relative flex flex-col items-center justify-center min-h-screen py-8 md:py-24">
+		<div className="w-full relative flex flex-col items-center justify-center py-8 md:py-40">
 			<Star size="size-12" className="absolute top-[18%] right-[20%]" />
 			<Star size="size-16" className="absolute  top-[28%] left-[20%]" />
-			<Star size="size-16" className="absolute  bottom-[5%] right-[40%]" />
 			<AnimatePresence mode="wait">
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}
@@ -49,7 +48,7 @@ const WhyUs = () => {
 								return (
 									<div
 										key={index}
-										className="border space-y-8 border-neutral-300 bg-from-bot p-8 rounded-2xl"
+										className="border space-y-8 border-neutral-300 hover:bg-from-bot hover:scale-105 duration transition p-8 rounded-2xl"
 									>
 										<img src={val.img} alt="" />
 										<div className="space-y-4">

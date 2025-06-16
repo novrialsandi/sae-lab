@@ -4,6 +4,13 @@ import { routing } from "@/i18n/routing";
 import "../globals.css";
 import Layout from "@/lib/layout/Index";
 
+import { Manrope } from "next/font/google";
+
+const manrope = Manrope({
+	subsets: ["latin"],
+	display: "swap",
+});
+
 export default async function LocaleLayout({ children, params }) {
 	const { locale } = await params;
 	if (!hasLocale(routing.locales, locale)) {
@@ -12,7 +19,7 @@ export default async function LocaleLayout({ children, params }) {
 
 	return (
 		<html lang={locale}>
-			<body>
+			<body className={`${manrope.className} antialiased`}>
 				<NextIntlClientProvider>
 					<Layout>{children}</Layout>
 				</NextIntlClientProvider>

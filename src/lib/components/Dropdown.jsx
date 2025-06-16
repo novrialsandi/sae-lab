@@ -260,7 +260,7 @@ const Dropdown = ({
 
 										return (
 											<button
-												className={`flex items-center gap-1 h-12 px-4 hover:bg-gray-100 text-left ${
+												className={`flex items-center text-nowrap gap-1 h-12 px-4 hover:bg-gray-100 text-left ${
 													isSelected ? "bg-green-50" : ""
 												}`}
 												key={index}

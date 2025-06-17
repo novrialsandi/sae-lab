@@ -8,6 +8,19 @@ import { Link } from "@/i18n/navigation";
 import { ChevronDown } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 import Dropdown from "../components/Dropdown";
+import {
+	EnglishCourseIcon,
+	ProofreadingIcon,
+	SwornTranslationIcon,
+	TranscriptionIcon,
+	TranslationIcon,
+	BIPAClassIcon,
+	CaptionInstagramIcon,
+	FormattingIcon,
+	PPTLayoutingIcon,
+	SubtitlingIcon,
+	TypingIcon,
+} from "@/lib/components/Icons";
 
 const HeaderPublic = () => {
 	const pathname = usePathname();
@@ -19,6 +32,45 @@ const HeaderPublic = () => {
 
 	const [isScroll, setIsScroll] = useState(false);
 	const [activeDropdown, setActiveDropdown] = useState(null);
+
+	const serviceIcons = (
+		key,
+		defaultColor = "#A7CED5",
+		hoverColor = "#407C89"
+	) => {
+		const size = 40;
+
+		const IconComponentMap = {
+			translation: TranslationIcon,
+			proofreading: ProofreadingIcon,
+			swornTranslation: SwornTranslationIcon,
+			transcription: TranscriptionIcon,
+			captionInstagram: CaptionInstagramIcon,
+			englishCourse: EnglishCourseIcon,
+			bipaClass: BIPAClassIcon,
+			subtitling: SubtitlingIcon,
+			typing: TypingIcon,
+			formatting: FormattingIcon,
+			pptLayouting: PPTLayoutingIcon,
+		};
+
+		const Icon = IconComponentMap[key];
+
+		return (
+			<span className="relative w-[40px] h-[40px]">
+				<Icon
+					size={size}
+					color={defaultColor}
+					className="absolute top-0 left-0 group-hover:opacity-0 "
+				/>
+				<Icon
+					size={size}
+					color={hoverColor}
+					className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 "
+				/>
+			</span>
+		);
+	};
 
 	const menus = [
 		{ key: "about", href: "/about" },
@@ -42,7 +94,7 @@ const HeaderPublic = () => {
 					key,
 					title: tServices(`items.${key}.title`),
 					description: tServices(`items.${key}.description`),
-					img: `/header/${key}.png`,
+					img: key,
 					href: `/service/${
 						key === "swornTranslation"
 							? "sworn-translation"
@@ -172,19 +224,14 @@ const HeaderPublic = () => {
 								<Link
 									key={subIndex}
 									href={subItem.href}
-									className="group block p-3 hover:bg-from-bot transition duration-300 rounded-lg  border border-neutral-100"
+									className="group block p-3 hover:bg-from-bot transition duration-300 rounded-lg border border-neutral-100"
 								>
-									<div className="flex items-center w-full  gap-3">
-										<div className="w-8 h-8">
-											<img src={subItem.img} alt="" />
-										</div>
+									<div className="flex items-center w-full gap-3">
+										{serviceIcons(subItem.img)}
 										<div>
-											<h3 className="font-semibold text-nowrap ">
+											<h3 className="font-semibold text-nowrap">
 												{subItem.title}
 											</h3>
-											{/* <p className="text-sm text-gray-500 mt-1 leading-relaxed">
-												{subItem.description}
-											</p> */}
 										</div>
 									</div>
 								</Link>

@@ -41,3 +41,13 @@ input::-webkit-inner-spin-button {
 		@apply bg-gradient-to-b from-white via-white to-[#CFE3E8] shadow-[0px_4px_24px_rgba(47,47,47,0.1)];
 	}
 }
+
+/* Custom Swiper Pagination */
+.custom-swiper .swiper-pagination-bullet {
+	background-color: #eef2f6; /* default bullet color (gray-300) */
+	opacity: 1;
+}
+
+.custom-swiper .swiper-pagination-bullet-active {
+	background-color: #5399a4; /* your custom active color */
+}

@@ -48,47 +48,58 @@
 		"items": {
 			"translation": {
 				"title": "Translation",
-				"description": "Professional document translation services"
+				"description": "Menerima berbagai jenis dokumen seperti artikel jurnal, tugas akhir, kuisioner, buku pedoman, presentasi power point",
+				"price": "Mulai dari Rp 160 per kata"
 			},
 			"proofreading": {
 				"title": "Proofreading",
-				"description": "Thorough proofreading and editing services"
+				"description": "Memastikan naskah Anda bebas dari kesalahan bahasa melalui layanan penyuntingan (proofreading)",
+				"price": "Mulai dari Rp 160 per kata"
 			},
 			"swornTranslation": {
 				"title": "Sworn Translation",
-				"description": "Certified sworn translation services"
+				"description": "Layanan penerjemah tersumpah untuk dokumen hukum atau legal, seperti KTP, KK, Akta, Transkrip Nilai, Ijazah dan dokumen lainnya.",
+				"price": "Mulai dari Rp 110.000 per halaman"
 			},
 			"transcription": {
 				"title": "Transcription",
-				"description": "Audio and video transcription services"
+				"description": "Transkripsi SAE bantu suara jadi teks yang jelas, mudah dicari, inklusif, dan mendukung SEO & analisis.",
+				"price": "Mulai dari Rp 5.000 per menit"
 			},
 			"captionInstagram": {
 				"title": "Instagram Caption",
-				"description": "Creative and engaging Instagram captions"
+				"description": "Bagikan cerita dengan pengikut bersama layanan pembuatan caption bahasa Inggris maupun bahasa Indonesia dari SAE.",
+				"price": "Mulai dari Rp 35.000"
 			},
 			"englishCourse": {
 				"title": "English Course",
-				"description": "Comprehensive English learning programs"
+				"description": "Terbuka untuk segala jenis usia dan akan diselenggarakan secara daring. Anda dapat pula memilih materi yang ingin dipelajari.",
+				"price": "Mulai dari Rp 75.000"
 			},
 			"bipaClass": {
 				"title": "BIPA Class",
-				"description": "Indonesian language classes for foreigners"
+				"description": "Kuasai bahasa Indonesia dari membaca, mendengarkan, menulis, dan berbicara, sekaligus mengetahui budaya Indonesia.",
+				"price": "Mulai dari Rp 150.000"
 			},
 			"subtitling": {
 				"title": "Subtitling",
-				"description": "Video subtitling and captioning services"
+				"description": "Permudah pemahaman ketika audio terlalu cepat atau mengandung dialek serta aksen yang sulit dimengerti",
+				"price": "Mulai dari Rp 15.000 per menit"
 			},
 			"typing": {
 				"title": "Typing",
-				"description": "Professional typing and data entry"
+				"description": "Kami menerima segala jenis dokumen dengan hasil rapi, tepat waktu, dan harga terjangkau.",
+				"price": "Mulai dari Rp 10.000"
 			},
 			"formatting": {
 				"title": "Formatting",
-				"description": "Professional document layout and formatting"
+				"description": "Format akademik seperti skripsi, tesis, disertasi, artikel jurnal, dengan mengikuti format yang diberikan secara rapi dan cepat.",
+				"price": "Mulai dari Rp 10.000"
 			},
 			"pptLayouting": {
 				"title": "PPT Layouting",
-				"description": "PowerPoint design and layout services"
+				"description": "SAE membantu anda membuat materi presentasi Anda menjadi lebih menarik, berdampak, dan indah",
+				"price": "Mulai dari Rp 10.000"
 			}
 		}
 	},

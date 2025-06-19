@@ -128,7 +128,7 @@ const Services = () => {
 							{/* Custom Navigation Buttons */}
 							<button
 								onClick={() => swiperRef.current?.slidePrev()}
-								className="sm:block absolute hidden -left-2 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors duration-200 border border-gray-200 -ml-4 md:-ml-6"
+								className="sm:block absolute hidden cursor-pointer hover:shadow-[0_0_4px_rgba(16,185,129,0.4)] -left-2 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors duration-200 border border-gray-200 -ml-4 md:-ml-6"
 								aria-label="Previous slide"
 							>
 								<ChevronLeft className="w-4 h-4 text-gray-600" />
@@ -136,7 +136,7 @@ const Services = () => {
 
 							<button
 								onClick={() => swiperRef.current?.slideNext()}
-								className="sm:block absolute hidden -right-2 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors duration-200 border border-gray-200 -mr-4 md:-mr-6"
+								className="sm:block absolute hidden cursor-pointer hover:shadow-[0_0_4px_rgba(16,185,129,0.4)] -right-2 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors duration-200 border border-gray-200 -mr-4 md:-mr-6"
 								aria-label="Next slide"
 							>
 								<ChevronRight className="w-4 h-4 text-gray-600" />

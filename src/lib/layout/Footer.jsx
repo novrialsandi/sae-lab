@@ -10,7 +10,7 @@ const FooterPublic = () => {
 				<div className="max-w-64 text-neutral-50 text-lg space-y-6">
 					<div>{icons.iconLogoWhite}</div>
 					<div>Jln. Wates no 123, Bantul Daerah Istimewa Yogyakarta</div>
-					<div>+62 8128418128 (Sandy)</div>
+					<div>+62 82137903311 (Admin)</div>
 				</div>
 
 				{/* Right section */}

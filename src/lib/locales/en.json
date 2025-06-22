@@ -105,6 +105,42 @@
 			}
 		}
 	},
+
+	"faq": {
+		"title": "Frequently Asked Questions",
+		"desc": "If you have any questions, we are here to answer them all.",
+		"items": [
+			{
+				"question": "What services does SAE provide?",
+				"answer": "SAE offers complete services in writing and language learning.\n\nWriting services include:\n- Document translation\n- Sworn translation\n- Proofreading & editing\n- Audio/video transcription\n- Subtitling & captioning\n- Instagram captions\n- Typing and data entry\n- Document formatting\n- PowerPoint layout design\n\nLanguage learning includes:\n- English courses\n- BIPA classes (Indonesian for Foreigners)"
+			},
+			{
+				"question": "Will my documents remain confidential?",
+				"answer": "Yes, your privacy is our top priority. All documents are kept confidential and deleted after completion."
+			},
+			{
+				"question": "How long does it take to complete my document?",
+				"answer": "The turnaround time depends on the service and package:\n- Regular: up to 5,000 words/day\n- Express: up to 7,000 words/day\n- Legal documents (sworn translation): 2–3 working days"
+			},
+			{
+				"question": "How do I send documents for translation?",
+				"answer": "Please contact us via WhatsApp at 082137903311."
+			},
+			{
+				"question": "Can I request revisions if the result is unsatisfactory?",
+				"answer": "Yes. We offer unlimited revisions for translation errors, but not for content changes."
+			},
+			{
+				"question": "Can you translate official documents like diplomas or certificates?",
+				"answer": "Yes, our sworn translation service covers official documents such as diplomas, certificates, and legal papers."
+			},
+			{
+				"question": "Can I consult before ordering a service?",
+				"answer": "Absolutely. Feel free to contact us via WhatsApp at 082137903311 for a free consultation."
+			}
+		]
+	},
+
 	"about": {
 		"title": "About SAE",
 		"subtitle": "Your trusted language partner",

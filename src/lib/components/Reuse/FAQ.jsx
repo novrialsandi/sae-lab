@@ -3,32 +3,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import Button from "../Button";
+import { useTranslations, useLocale } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 const FAQ = () => {
 	const [openIndex, setOpenIndex] = useState(null);
 
-	const faq = [
-		{
-			question: "Bagaimana cara memulai konsultasi?",
-			answer:
-				"Cukup hubungi kami melalui WhatsApp atau email. Kami akan mengatur jadwal konsultasi sesuai kenyamanan Anda—tanpa perlu isi formulir rumit.",
-		},
-		{
-			question: "Berapa lama proses pengerjaan biasanya?",
-			answer:
-				"Waktu pengerjaan bervariasi tergantung kompleksitas proyek. Untuk proyek sederhana biasanya 2-4 minggu, sedangkan proyek besar bisa memakan waktu 2-6 bulan. Kami akan memberikan estimasi waktu yang jelas setelah konsultasi awal.",
-		},
-		{
-			question: "Layanan apa saja yang disediakan SAE?",
-			answer:
-				"SAE menyediakan berbagai layanan termasuk konsultasi teknik, desain struktural, analisis kekuatan material, perencanaan konstruksi, dan supervisi proyek. Kami juga melayani audit teknis dan sertifikasi keamanan.",
-		},
-		{
-			question: "Apakah ada garansi untuk layanan yang diberikan?",
-			answer:
-				"Ya, kami memberikan garansi untuk semua layanan konsultasi dan desain. Periode garansi disesuaikan dengan jenis layanan dan akan dijelaskan dalam kontrak kerja sama.",
-		},
-	];
+	const t = useTranslations("faq");
+
+	const rawItems = t.raw("items");
 
 	const toggleFAQ = (index) => {
 		setOpenIndex(openIndex === index ? null : index);
@@ -40,24 +23,20 @@ const FAQ = () => {
 				initial={{ opacity: 0, y: 30 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.6, ease: "easeOut" }}
-				className="w-full max-w-[1440px] px-4 sm:px-6 flex flex-col lg:flex-row gap-8 lg:gap-12 justify-between lg:items-start items-center"
+				className="w-full max-w-[1440px] px-4 sm:px-6 flex flex-col gap-8 lg:gap-12 justify-center items-center"
 			>
 				{/* Left side - Header */}
-				<div className="max-w-[500px] flex flex-col lg:justify-start lg:items-start justify-center items-center gap-4">
+				<div className="max-w-[500px] flex flex-col lg:justify-start justify-center items-center gap-4">
 					<div className="bg-[#E9F2F5] flex gap-2 items-center rounded-2xl font-medium text-[#74B2BC] p-2 px-4 w-fit">
 						<Star size="size-5" color="#74B2BC" />
 						FAQ
 					</div>
-					<div className="text-2xl sm:text-3xl lg:text-4xl text-[#2f555d] font-semibold">
-						Frequently Asked Questions
+					<div className="text-2xl text-center sm:text-3xl lg:text-4xl text-[#2f555d] font-semibold">
+						{t("title")}
 					</div>
 					<div className="text-lg lg:text-start text-center text-neutral-500">
-						Jika ada pertanyaan yang ingin Anda ajukan, kami akan menjawab semua
-						pertanyaan Anda.
+						{t("desc")}
 					</div>
-					<Button isPrimary={false} size="small" className="w-fit">
-						Lihat Selengkapnya
-					</Button>
 				</div>
 
 				{/* Right side - FAQ Items */}
@@ -67,7 +46,7 @@ const FAQ = () => {
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
 				>
-					{faq.map((item, index) => (
+					{rawItems.map((item, index) => (
 						<motion.div
 							key={index}
 							className="bg-white rounded-2xl shadow-sm border border-[#E9F2F5] overflow-hidden"

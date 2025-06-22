@@ -79,7 +79,7 @@ const HeaderPublic = () => {
 		{ key: "about", href: "/about" },
 		{
 			key: "services",
-			href: "/services",
+			// href: "/",
 			subMenu: {
 				items: [
 					"translation",
@@ -117,13 +117,18 @@ const HeaderPublic = () => {
 	];
 
 	// Helper function to check if current path matches menu item
-	const isActiveMenu = (menuHref) => {
+	const isActiveMenu = (menuHref, menuKey) => {
 		// Remove locale from pathname for comparison
 		const cleanPathname = pathname.replace(`/${locale}`, "") || "/";
 
 		// For home route
 		if (menuHref === "/") {
 			return cleanPathname === "/";
+		}
+
+		// For services menu - check if current path starts with /service
+		if (menuKey === "services") {
+			return cleanPathname.startsWith("/service");
 		}
 
 		// For other routes
@@ -190,25 +195,37 @@ const HeaderPublic = () => {
 								className="relative"
 								onMouseEnter={() => handleMouseEnter(index)}
 							>
-								<Link
-									href={val.href}
-									className={`cursor-pointer ${
-										isActiveMenu(val.href)
-											? "text-primary font-bold"
-											: isScroll || activeDropdown === index
-											? "text-gray-800 hover:text-primary"
-											: "hover:text-primary"
-									} ${val.subMenu ? "flex items-center gap-1" : ""}`}
-								>
-									{tNavbar(`menu.${val.key}`)}
-									{val.subMenu && (
+								{val.subMenu ? (
+									<div
+										className={`cursor-pointer ${
+											isActiveMenu(val.href, val.key)
+												? "text-primary font-bold"
+												: isScroll || activeDropdown === index
+												? "text-gray-800 hover:text-primary"
+												: "hover:text-primary"
+										} flex items-center gap-1`}
+									>
+										{tNavbar(`menu.${val.key}`)}
 										<ChevronDown
 											className={`w-4 h-4 transition-transform ${
 												activeDropdown === index ? "rotate-180" : ""
 											}`}
 										/>
-									)}
-								</Link>
+									</div>
+								) : (
+									<Link
+										href={val.href}
+										className={`cursor-pointer ${
+											isActiveMenu(val.href, val.key)
+												? "text-primary font-bold"
+												: isScroll || activeDropdown === index
+												? "text-gray-800 hover:text-primary"
+												: "hover:text-primary"
+										}`}
+									>
+										{tNavbar(`menu.${val.key}`)}
+									</Link>
+								)}
 							</div>
 						))}
 					</div>
@@ -387,7 +404,7 @@ const HeaderPublic = () => {
 												<Link
 													href={val.href}
 													className={`block p-3 font-medium hover:bg-gray-50 rounded-lg transition-colors ${
-														isActiveMenu(val.href)
+														isActiveMenu(val.href, val.key)
 															? "text-primary font-bold bg-primary/10"
 															: ""
 													}`}

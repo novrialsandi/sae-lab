@@ -106,6 +106,42 @@
 			}
 		}
 	},
+
+	"faq": {
+		"title": "Pertanyaan yang Sering Diajukan",
+		"desc": "Jika ada pertanyaan yang ingin Anda ajukan, kami akan menjawab semua pertanyaan Anda.",
+		"items": [
+			{
+				"question": "Layanan apa saja yang disediakan SAE?",
+				"answer": "SAE menyediakan layanan lengkap di bidang penulisan dan pembelajaran bahasa.\n\nLayanan penulisan meliputi:\n- Terjemahan dokumen\n- Terjemahan tersumpah\n- Proofreading & editing\n- Transkripsi audio/video\n- Subtitling & captioning\n- Caption Instagram\n- Pengetikan dan entry data\n- Formatting dokumen\n- Desain layout PowerPoint\n\nLayanan pembelajaran meliputi:\n- Kelas Bahasa Inggris\n- Kelas BIPA (Bahasa Indonesia bagi Penutur Asing)"
+			},
+			{
+				"question": "Apakah dokumen saya akan dijaga kerahasiaannya?",
+				"answer": "Ya, privasi Anda adalah prioritas kami. Semua dokumen akan dijaga kerahasiaannya dan langsung dihapus setelah proses selesai."
+			},
+			{
+				"question": "Berapa lama waktu pengerjaan dokumen saya?",
+				"answer": "Waktu pengerjaan tergantung jenis layanan dan paket yang dipilih:\n- Paket reguler: hingga 5.000 kata per hari\n- Paket express: hingga 7.000 kata per hari\n- Dokumen legal (terjemahan tersumpah): 2–3 hari kerja"
+			},
+			{
+				"question": "Bagaimana cara mengirim dokumen untuk diterjemahkan?",
+				"answer": "Silakan hubungi kami melalui WhatsApp ke 082137903311."
+			},
+			{
+				"question": "Apakah saya bisa revisi jika hasilnya kurang sesuai?",
+				"answer": "Bisa. Kami menyediakan revisi tanpa batas untuk kesalahan penerjemahan. Namun, revisi tidak mencakup perubahan konten."
+			},
+			{
+				"question": "Apakah bisa menerjemahkan dokumen resmi seperti ijazah atau akta?",
+				"answer": "Bisa, layanan terjemahan tersumpah kami mencakup dokumen resmi seperti ijazah, akta, dan dokumen legal lainnya."
+			},
+			{
+				"question": "Apakah bisa konsultasi sebelum memesan layanan?",
+				"answer": "Tentu bisa. Silakan hubungi kami melalui WhatsApp ke 082137903311 untuk konsultasi gratis."
+			}
+		]
+	},
+
 	"about": {
 		"title": "Tentang SAE",
 		"subtitle": "Mitra bahasa terpercaya Anda",

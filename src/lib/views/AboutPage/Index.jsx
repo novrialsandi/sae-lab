@@ -2,9 +2,9 @@
 
 import React from "react";
 import HeroAbout from "./Hero";
-import WhyUs from "../Reuse/WhyUs";
-import OurClient from "../Reuse/OurClient";
-import ConsultNow from "../Reuse/ConsultNow";
+import WhyUs from "../../components/Reuse/WhyUs";
+import OurClient from "../../components/Reuse/OurClient";
+import ConsultNow from "../../components/Reuse/ConsultNow";
 
 const AboutComponent = () => {
 	return (

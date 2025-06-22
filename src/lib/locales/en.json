@@ -20,9 +20,11 @@
 	"navbar": {
 		"brand": "SAE",
 		"menu": {
+			"home": "Home",
 			"about": "About Us",
 			"services": "Services",
-			"contact": "Contact"
+			"contact": "Contact",
+			"faq": "FAQ"
 		},
 		"locale": {
 			"current": "EN",

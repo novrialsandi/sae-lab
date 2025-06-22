@@ -20,9 +20,12 @@
 	"navbar": {
 		"brand": "SAE",
 		"menu": {
+			"home": "Beranda",
+
 			"about": "Tentang Kami",
 			"services": "Layanan",
-			"contact": "Kontak"
+			"contact": "Kontak",
+			"faq": "FAQ"
 		},
 		"locale": {
 			"current": "ID",

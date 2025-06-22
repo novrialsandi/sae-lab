@@ -73,6 +73,7 @@ const HeaderPublic = () => {
 	};
 
 	const menus = [
+		{ key: "home", href: "/" },
 		{ key: "about", href: "/about" },
 		{
 			key: "services",
@@ -110,6 +111,7 @@ const HeaderPublic = () => {
 			},
 		},
 		{ key: "contact", href: "/contact" },
+		{ key: "faq", href: "/faq" },
 	];
 
 	useEffect(() => {

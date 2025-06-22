@@ -9,32 +9,39 @@ const HeroAbout = () => {
 	];
 
 	return (
-		<div className="w-full flex flex-col items-center justify-center bg-from-top min-h-svh py-24">
+		<div className="w-full flex flex-col items-center justify-center bg-from-top min-h-screen py-12 sm:py-16 md:py-20 lg:py-24 pt-24">
 			<motion.div
 				initial={{ opacity: 0, y: 30 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.6, ease: "easeOut" }}
-				className="w-full max-w-[1440px] px-4 sm:px-6 flex flex-col lg:flex-row gap-8 lg:gap-12 lg:justify-between"
+				className="w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 flex md:flex-col flex-col-reverse lg:flex-row gap-6 sm:gap-8 lg:gap-12 lg:justify-between"
 			>
-				<div className="max-w-[533px] flex flex-col justify-between gap-6 order-2 lg:order-1">
-					<div className="space-y-4">
-						<div className="text-5xl font-semibold">Tentang Kami</div>
-						<div className="text-lg text-justify">
+				<div className="max-w-full lg:max-w-[533px] flex flex-col justify-between gap-6 sm:gap-8 order-2 lg:order-1">
+					<div className="space-y-3 sm:space-y-4">
+						<div className="text-neutral-700 text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-center md:text-start">
+							Tentang Kami
+						</div>
+						<div className="text-base text-neutral-500 sm:text-lg text-center md:text-start leading-relaxed">
 							SAE adalah tempat yang tepat untuk memenuhi segala kebutuhan
-							penulisan Anda. Kami menyebutnya “rumah” karena di sini Anda tidak
+							penulisan Anda. Kami menyebutnya "rumah" karena di sini Anda tidak
 							hanya memesan lewat formulir, tetapi juga bisa berdiskusi langsung
 							dengan linguist kami. Kami menghargai setiap waktu Anda dengan
 							memberikan respons yang cepat dan hasil kerja yang dikirim tepat
 							waktu.
 						</div>
 					</div>
-					<div className="flex justify-between">
+					<div className="flex justify-between gap-4 sm:gap-2">
 						{aboutProject.map((val, index) => (
-							<div key={index} className="flex flex-col gap-1">
-								<div className="md:text-5xl text-4xl font-semibold text-primary">
+							<div
+								key={index}
+								className="flex flex-col gap-1 text-center sm:text-left"
+							>
+								<div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-primary leading-none">
 									{val.value}
 								</div>
-								<div className="text-lg text-neutral-600">{val.label}</div>
+								<div className="text-sm sm:text-base lg:text-lg text-neutral-600">
+									{val.label}
+								</div>
 							</div>
 						))}
 					</div>
@@ -48,7 +55,7 @@ const HeroAbout = () => {
 					<img
 						src="/about/hero.png"
 						alt="About illustration"
-						className="w-full max-w-sm sm:max-w-md lg:max-w-full h-auto object-contain"
+						className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-full h-auto object-contain"
 					/>
 				</motion.div>
 			</motion.div>

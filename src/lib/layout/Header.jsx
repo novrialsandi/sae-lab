@@ -79,7 +79,7 @@ const HeaderPublic = () => {
 		{ key: "about", href: "/about" },
 		{
 			key: "services",
-			href: "/",
+			href: "/services",
 			subMenu: {
 				items: [
 					"translation",
@@ -115,6 +115,20 @@ const HeaderPublic = () => {
 		{ key: "contact", href: "/contact" },
 		{ key: "faq", href: "/faq" },
 	];
+
+	// Helper function to check if current path matches menu item
+	const isActiveMenu = (menuHref) => {
+		// Remove locale from pathname for comparison
+		const cleanPathname = pathname.replace(`/${locale}`, "") || "/";
+
+		// For home route
+		if (menuHref === "/") {
+			return cleanPathname === "/";
+		}
+
+		// For other routes
+		return cleanPathname === menuHref;
+	};
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -179,7 +193,7 @@ const HeaderPublic = () => {
 								<Link
 									href={val.href}
 									className={`cursor-pointer ${
-										`/${pathname.split("/")[2]}` === val.href
+										isActiveMenu(val.href)
 											? "text-primary font-bold"
 											: isScroll || activeDropdown === index
 											? "text-gray-800 hover:text-primary"
@@ -373,7 +387,7 @@ const HeaderPublic = () => {
 												<Link
 													href={val.href}
 													className={`block p-3 font-medium hover:bg-gray-50 rounded-lg transition-colors ${
-														`/${pathname.split("/")[2]}` === val.href
+														isActiveMenu(val.href)
 															? "text-primary font-bold bg-primary/10"
 															: ""
 													}`}

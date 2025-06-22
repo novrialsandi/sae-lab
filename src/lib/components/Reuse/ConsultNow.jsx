@@ -10,7 +10,7 @@ const ConsultNow = () => {
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 1, ease: "easeOut" }}
-					className="w-full z-10 max-w-[1440px]  px-4 sm:px-6 flex flex-col lg:flex-row gap-8 lg:gap-12 lg:items-start items-center lg:justify-evenly"
+					className="w-full z-10 max-w-[1440px]  px-4 sm:px-6 flex flex-col-reverse lg:flex-row gap-8 lg:gap-12 lg:items-start items-center lg:justify-evenly"
 				>
 					<div className="max-w-[494px] flex flex-col gap-6 lg:items-start items-center">
 						<div className="font-semibold text-2xl sm:text-3xl lg:text-4xl leading-snug lg:text-start text-center">

@@ -113,7 +113,7 @@ const Detail = () => {
 								</div>
 
 								{/* Projects card */}
-								<div className="flex-1 p-4 sm:p-6 rounded-2xl bg-[#A7CED5] flex flex-col items-center text-center">
+								<div className="flex-1 p-4 sm:p-6 rounded-2xl bg-[#A7CED5] flex flex-col items-center justify-center text-center">
 									<img src="/user.png" alt="" />
 
 									<div className="font-semibold text-sm sm:text-base text-[#407C89] mb-1">

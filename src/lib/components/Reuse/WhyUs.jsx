@@ -24,7 +24,7 @@ const WhyUs = () => {
 	];
 
 	return (
-		<div className="w-full relative flex flex-col items-center justify-center py-8 md:py-40">
+		<div className="w-full relative flex flex-col items-center justify-center py-8 min-h-svh">
 			<Star size="size-12" className="absolute top-[18%] right-[20%]" />
 			<Star size="size-16" className="absolute  top-[28%] left-[20%]" />
 			<AnimatePresence mode="wait">
@@ -37,8 +37,10 @@ const WhyUs = () => {
 				>
 					<div className="flex flex-col items-center gap-12">
 						<div className="flex flex-col items-center gap-4">
-							<div className="text-4xl font-semibold">Why SAE?</div>
-							<div className="text-lg text-neutral-500">
+							<div className="text-3xl sm:text-4xl lg:text-5xl font-semibold">
+								Why SAE?
+							</div>
+							<div className="text-base sm:text-lg text-center text-neutral-500">
 								SAE adalah tempat yang tepat untuk memenuhi segala kebutuhan
 								penulisan Anda.
 							</div>
@@ -48,7 +50,7 @@ const WhyUs = () => {
 								return (
 									<div
 										key={index}
-										className="border space-y-8 border-neutral-300 hover:bg-from-bot hover:scale-105 duration transition p-8 rounded-2xl"
+										className="border space-y-8 bg-white border-neutral-300 hover:bg-from-bot hover:scale-105 duration transition md:p-8 p-4 rounded-2xl"
 									>
 										<img src={val.img} alt="" />
 										<div className="space-y-4">

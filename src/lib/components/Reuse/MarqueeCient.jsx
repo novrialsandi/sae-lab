@@ -15,7 +15,7 @@ const MarqueeCient = () => {
 					<Star size="size-5" color="#74B2BC" />
 					Client Kami
 				</div>
-				<div className="font-semibold text-4xl text-[#2f555d]">
+				<div className="font-semibold text-2xl sm:text-3xl lg:text-4xl text-center text-[#2f555d]">
 					Dipercaya oleh Berbagai Perusahaan & Institusi
 				</div>
 			</div>
@@ -24,7 +24,7 @@ const MarqueeCient = () => {
 					{companyLogos.slice(0, 10).map((val, index) => (
 						<div
 							key={index}
-							className=" bg-white shadow-md aspect-square hover:bg-from-bot flex rounded-2xl items-center justify-center border border-neutral-200 md:size-72 size-20 hover:bg-left-bottom"
+							className=" bg-white shadow-md aspect-square hover:bg-from-bot flex rounded-2xl items-center justify-center border border-neutral-200 lg:size-64 md:size-48 size-32 p-4 hover:bg-left-bottom"
 						>
 							<img src={val} alt="" />
 						</div>
@@ -36,7 +36,7 @@ const MarqueeCient = () => {
 					{companyLogos.slice(10, 19).map((val, index) => (
 						<div
 							key={index}
-							className=" bg-white shadow-md aspect-square hover:bg-from-bot flex rounded-2xl items-center justify-center border border-neutral-200 md:size-72 size-20 hover:bg-left-bottom"
+							className=" bg-white shadow-md aspect-square hover:bg-from-bot flex rounded-2xl items-center justify-center border border-neutral-200 lg:size-64 md:size-48 size-32 p-4 hover:bg-left-bottom"
 						>
 							<img src={val} alt="" />
 						</div>

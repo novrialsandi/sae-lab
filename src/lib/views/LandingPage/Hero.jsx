@@ -8,7 +8,7 @@ const Hero = () => {
 				initial={{ opacity: 0, y: 30 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.6, ease: "easeOut" }}
-				className="w-full relative max-w-[1440px] px-4 sm:px-6 flex flex-col gap-10 lg:gap-12 justify-between h-full items-center"
+				className="w-full relative max-w-[1440px] px-4 flex flex-col gap-10 lg:gap-12 justify-between h-full items-center"
 			>
 				{/* Text Section */}
 				<div className="max-w-[750px] w-full z-10 flex flex-col gap-6 text-center items-center">
@@ -31,7 +31,7 @@ const Hero = () => {
 
 				{/* Image Section */}
 				<motion.div
-					className="w-full flex items-center justify-center"
+					className="w-full flex items-center justify-center overflow-visible sm:overflow-hidden"
 					initial={{ opacity: 0, scale: 0.9 }}
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
@@ -39,7 +39,7 @@ const Hero = () => {
 					<img
 						src="/hero.png"
 						alt="Hero illustration"
-						className="w-full h-auto object-contain"
+						className="w-[150%] max-w-none sm:w-full object-center"
 					/>
 				</motion.div>
 			</motion.div>

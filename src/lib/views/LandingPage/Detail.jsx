@@ -27,12 +27,12 @@ const Detail = () => {
 			label: "Transkripsi",
 			logo: <TranscriptSmall />,
 		},
+		// {
+		// 	label: "English Course",
+		// 	logo: <CourseSmall />,
+		// },
 		{
-			label: "English Course",
-			logo: <CourseSmall />,
-		},
-		{
-			label: "+ 6 Lainnya",
+			label: "+ 7 Lainnya",
 			logo: "",
 		},
 	];
@@ -95,9 +95,7 @@ const Detail = () => {
 										</div>
 									))}
 								</div>
-								<div className="w-20 h-20 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">
-									<img src="/service.png" alt="" />
-								</div>
+								<img src="/service.png" alt="" className="size-28" />
 							</div>
 
 							{/* Stats cards row */}

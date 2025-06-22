@@ -40,18 +40,18 @@ const FAQ = () => {
 				initial={{ opacity: 0, y: 30 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.6, ease: "easeOut" }}
-				className="w-full max-w-[1440px] px-4 sm:px-6 flex flex-col lg:flex-row gap-8 lg:gap-12 justify-between items-start"
+				className="w-full max-w-[1440px] px-4 sm:px-6 flex flex-col lg:flex-row gap-8 lg:gap-12 justify-between lg:items-start items-center"
 			>
 				{/* Left side - Header */}
-				<div className="max-w-[500px] flex flex-col gap-4 lg:sticky lg:top-8">
+				<div className="max-w-[500px] flex flex-col lg:justify-start lg:items-start justify-center items-center gap-4">
 					<div className="bg-[#E9F2F5] flex gap-2 items-center rounded-2xl font-medium text-[#74B2BC] p-2 px-4 w-fit">
 						<Star size="size-5" color="#74B2BC" />
 						FAQ
 					</div>
-					<div className="text-4xl text-[#2f555d] font-semibold">
+					<div className="text-2xl sm:text-3xl lg:text-4xl text-[#2f555d] font-semibold">
 						Frequently Asked Questions
 					</div>
-					<div className="text-lg text-neutral-500">
+					<div className="text-lg lg:text-start text-center text-neutral-500">
 						Jika ada pertanyaan yang ingin Anda ajukan, kami akan menjawab semua
 						pertanyaan Anda.
 					</div>

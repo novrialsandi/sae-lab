@@ -24,7 +24,7 @@ const MarqueeCient = () => {
 					{companyLogos.slice(0, 10).map((val, index) => (
 						<div
 							key={index}
-							className="grayscale hover:grayscale-0 bg-white shadow-md aspect-square hover:bg-from-bot flex rounded-2xl items-center justify-center border border-neutral-200 size-72 hover:bg-left-bottom"
+							className=" bg-white shadow-md aspect-square hover:bg-from-bot flex rounded-2xl items-center justify-center border border-neutral-200 md:size-72 size-20 hover:bg-left-bottom"
 						>
 							<img src={val} alt="" />
 						</div>
@@ -36,7 +36,7 @@ const MarqueeCient = () => {
 					{companyLogos.slice(10, 19).map((val, index) => (
 						<div
 							key={index}
-							className="grayscale hover:grayscale-0 bg-white shadow-md aspect-square hover:bg-from-bot flex rounded-2xl items-center justify-center border border-neutral-200 size-72 hover:bg-left-bottom"
+							className=" bg-white shadow-md aspect-square hover:bg-from-bot flex rounded-2xl items-center justify-center border border-neutral-200 md:size-72 size-20 hover:bg-left-bottom"
 						>
 							<img src={val} alt="" />
 						</div>

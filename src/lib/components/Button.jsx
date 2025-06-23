@@ -17,18 +17,28 @@ const Button = ({
 		if (e && typeof e.stopPropagation === "function") {
 			e.stopPropagation();
 		}
-		if (!isLoading) {
+		if (!isLoading && !disabled) {
 			onClick(e);
 		}
 	};
 
+	const getButtonClasses = () => {
+		const isDisabled = disabled || isLoading;
+
+		if (isDisabled) {
+			return "text-white bg-primary/50 cursor-not-allowed";
+		}
+
+		return isPrimary
+			? "text-[#FCFCFD] bg-primary hover:bg-primary/90 cursor-pointer"
+			: "border border-primary bg-white text-primary cursor-pointer";
+	};
+
 	return (
 		<button
-			className={`min-w-24 ${className}  ${sizeDataClass[size]} ${
-				isPrimary
-					? "text-[#FCFCFD] bg-primary hover:bg-primary/90"
-					: " border border-primary bg-white text-primary"
-			} font-bold rounded-lg text-nowrap text-sm flex px-4 items-center justify-center cursor-pointer`}
+			className={`min-w-24 ${className} ${
+				sizeDataClass[size]
+			} ${getButtonClasses()} font-bold rounded-lg text-nowrap text-sm flex px-4 items-center justify-center transition-colors duration-200`}
 			disabled={disabled || isLoading}
 			onClick={handleClick}
 		>

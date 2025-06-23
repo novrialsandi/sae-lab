@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Button from "@/lib/components/Button";
 import TextInput from "@/lib/components/TextInput";
 import TextArea from "@/lib/components/TextArea";
@@ -11,6 +11,13 @@ import { useTranslations } from "next-intl";
 const ContactComponent = () => {
 	const tContact = useTranslations("contact");
 	const tServices = useTranslations("services");
+
+	// Form state
+	const [formData, setFormData] = useState({
+		name: "",
+		service: "",
+		description: "",
+	});
 
 	const menus = [
 		"translation",
@@ -28,6 +35,41 @@ const ContactComponent = () => {
 		key,
 		title: tServices(`items.${key}.title`),
 	}));
+
+	const handleInputChange = (field, value) => {
+		setFormData((prev) => ({
+			...prev,
+			[field]: value,
+		}));
+	};
+
+	const handleSubmit = () => {
+		// Get service title
+		const selectedService = menus.find((menu) => menu.key === formData.service);
+		const serviceTitle = selectedService
+			? selectedService.title
+			: formData.service;
+
+		// Format WhatsApp message
+		const message = `Hi! I'm interested in your services.
+
+*Name:* ${formData.name}
+*Service:* ${serviceTitle}
+*Description:* ${formData.description}
+
+Please let me know how we can proceed. Thank you!`;
+
+		// WhatsApp number (remove spaces and format)
+		const whatsappNumber = "6282137903311"; // +62 8213-7903-311 formatted
+
+		// Create WhatsApp URL
+		const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+			message
+		)}`;
+
+		// Open WhatsApp
+		window.open(whatsappUrl, "_blank");
+	};
 
 	return (
 		<div className="w-full flex flex-col items-center justify-center min-h-svh py-24">
@@ -48,22 +90,39 @@ const ContactComponent = () => {
 					</div>
 					<div className="p-4 sm:p-6 space-y-4 sm:space-y-6 shadow-md rounded-2xl border border-neutral-200">
 						<TextInput
+							size="small"
 							label={tContact("form.nameLabel")}
 							placeholder={tContact("form.namePlaceholder")}
-						/>{" "}
+							value={formData.name}
+							onChange={(e) => handleInputChange("name", e.target.value)}
+						/>
 						<Dropdown
+							size="small"
 							items={menus.map((item) => ({
 								label: item.title,
 								value: item.key,
 							}))}
 							label={tContact("form.serviceLabel")}
 							placeholder={tContact("form.servicePlaceholder")}
+							value={formData.service}
+							onStateChange={(value) => handleInputChange("service", value)}
 						/>
 						<TextArea
 							label={tContact("form.descriptionLabel")}
 							placeholder={tContact("form.descriptionPlaceholder")}
+							value={formData.description}
+							onChange={(e) => handleInputChange("description", e.target.value)}
 						/>
-						<Button className="w-full rounded-md">
+						<Button
+							className="w-full rounded-md"
+							onClick={handleSubmit}
+							size="small"
+							disabled={
+								!formData.name.trim() ||
+								!formData.service ||
+								!formData.description.trim()
+							}
+						>
 							{tContact("form.submitButton")}
 						</Button>
 					</div>

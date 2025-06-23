@@ -32,7 +32,7 @@ const TextInput = ({
 	const timerRef = useRef(null);
 
 	const sizeDataClass = {
-		small: "h-8",
+		small: "h-10",
 		medium: "h-12",
 		large: "h-[60px]",
 	};

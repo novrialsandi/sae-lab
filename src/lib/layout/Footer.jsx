@@ -9,7 +9,10 @@ const FooterPublic = () => {
 				{/* Left section */}
 				<div className="max-w-64 text-neutral-50 text-lg space-y-6">
 					<div>{icons.iconLogoWhite}</div>
-					<div>Jln. Wates no 123, Bantul Daerah Istimewa Yogyakarta</div>
+					<div>
+						17A KM, Daerah Istimewa, Kaliurang St No.9, RW.7, Sardonoharjo,
+						Yogyakarta, Special Region of Yogyakarta 55581
+					</div>
 					<div>+62 8213-7903-311 (Admin)</div>
 					<div className="flex items-center gap-2">
 						<Mail className="w-5 h-5" />

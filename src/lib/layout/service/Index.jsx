@@ -106,7 +106,6 @@ const LayoutServiceComponent = ({ children }) => {
 					{/* Mobile Dropdown */}
 					<div className="block md:hidden">
 						<Dropdown
-							popupTopPosition={50}
 							defaultValue={getCurrentService()}
 							items={menus.map((item) => ({
 								label: item.title,

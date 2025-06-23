@@ -34,7 +34,7 @@ const FAQ = () => {
 					<div className="text-2xl text-center sm:text-3xl lg:text-4xl text-[#2f555d] font-semibold">
 						{t("title")}
 					</div>
-					<div className="text-lg lg:text-start text-center text-neutral-500">
+					<div className="text-lg text-center text-neutral-500">
 						{t("desc")}
 					</div>
 				</div>

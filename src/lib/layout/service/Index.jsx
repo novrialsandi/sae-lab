@@ -63,12 +63,12 @@ const LayoutServiceComponent = ({ children }) => {
 
 	return (
 		<>
-			<div className="w-full flex flex-col items-center md:justify-center min-h-svh md:pt-16 pt-24">
+			<div className="w-full flex flex-col items-center md:justify-center min-h-svh py-24">
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, ease: "easeOut" }}
-					className="w-full max-w-[1440px] px-4 sm:px-6 flex flex-col md:flex-row gap-6"
+					className="w-full max-w-[1440px] px-4 sm:px-6 flex flex-col md:flex-row gap-8"
 				>
 					{/* Desktop Navigation */}
 					<div className="p-4 hidden px-6 md:flex flex-col gap-4 rounded-2xl border bg-white border-neutral-200 shadow-md">

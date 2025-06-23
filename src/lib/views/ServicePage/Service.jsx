@@ -79,6 +79,30 @@ const Service = () => {
 
 	const currentService = getCurrentService();
 
+	// WhatsApp consultation handler
+	const handleConsultation = () => {
+		if (!currentService) return;
+
+		// Format WhatsApp message
+		const message = `Hi! I'm interested in your *${currentService.title}* service.
+
+*Service:* ${currentService.title}
+*Price:* ${currentService.price}
+
+Could you please provide more information and help me get started? Thank you!`;
+
+		// WhatsApp number
+		const whatsappNumber = "6282137903311"; // +62 8213-7903-311 formatted
+
+		// Create WhatsApp URL
+		const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+			message
+		)}`;
+
+		// Open WhatsApp
+		window.open(whatsappUrl, "_blank");
+	};
+
 	// If no matching service found, show default content
 	if (!currentService) {
 		return (
@@ -152,7 +176,9 @@ const Service = () => {
 						<div className="text-[#697586] text-sm">
 							{formatPriceText(currentService.price)}
 						</div>
-						<Button size="small">{tServices("consult")}</Button>
+						<Button size="small" onClick={handleConsultation}>
+							{tServices("consult")}
+						</Button>
 					</div>
 				</div>
 			</motion.div>

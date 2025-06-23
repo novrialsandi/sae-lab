@@ -7,7 +7,7 @@ const Hero = () => {
 	const t = useTranslations("hero");
 
 	return (
-		<div className="w-full flex overflow-hidden flex-col items-center bg-from-top min-h-svh md:pt-16 pt-6">
+		<div className="w-full flex overflow-hidden flex-col items-center bg-from-top min-h-svh md:pt-16 pt-8">
 			<motion.div
 				initial={{ opacity: 0, y: 30 }}
 				animate={{ opacity: 1, y: 0 }}

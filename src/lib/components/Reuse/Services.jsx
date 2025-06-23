@@ -1,10 +1,10 @@
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -22,14 +22,10 @@ import {
 	SubtitlingIcon,
 	TypingIcon,
 } from "@/lib/components/Icons";
-import { usePathname, useRouter } from "next/navigation";
 import Button from "@/lib/components/Button";
 import Star from "@/lib/components/Star";
 
 const Services = () => {
-	const pathname = usePathname();
-	const locale = useLocale();
-	const router = useRouter();
 	const swiperRef = useRef(null);
 
 	const tServices = useTranslations("services");

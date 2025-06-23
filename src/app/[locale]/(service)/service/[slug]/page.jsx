@@ -1,11 +1,7 @@
-import React from "react";
+import ServicesComponent from "@/lib/views/ServicePage/Index";
 
 const ServiceSlug = () => {
-	return (
-		<div>
-			<div>halo</div>
-		</div>
-	);
+	return <ServicesComponent />;
 };
 
 export default ServiceSlug;

@@ -317,6 +317,7 @@ const HeaderPublic = () => {
 									(subItem, subIndex) => (
 										<Link
 											key={subIndex}
+											onClick={() => setActiveDropdown(null)}
 											href={subItem.href}
 											className="group block p-3 hover:bg-from-bot transition duration-300 rounded-lg border border-neutral-100"
 										>
@@ -339,7 +340,7 @@ const HeaderPublic = () => {
 
 			{/* Mobile Menu Overlay */}
 			{isMobileMenuOpen && (
-				<div className="lg:hidden fixed inset-0 z-40 bg-black bg-opacity-50">
+				<div className="lg:hidden fixed inset-0 z-40 bg-black/50">
 					<div className="fixed inset-y-0 right-0 w-full max-w-sm bg-white shadow-xl">
 						<div className="flex flex-col h-full">
 							{/* Mobile Menu Header */}

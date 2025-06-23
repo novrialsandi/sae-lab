@@ -57,57 +57,57 @@
 			"translation": {
 				"title": "Translation",
 				"description": "Language differences often hinder the fusion of outstanding ideas. SAE is ready to bridge your ideas to travel the world with our accurate and fast translation service. We have translated various documents, such as journal articles, final papers, questionnaires, guide books, manual books, PowerPoint presentations, and company profiles. Rest assured that your documents are kept secret and translated by more than nine-year-old experienced linguists.",
-				"price": "Starting from Rp 160/word"
+				"price": "Starting from Rp 160 per word"
 			},
 			"proofreading": {
 				"title": "Proofreading",
 				"description": "Good writing must be good-written. SAE ensures your manuscript is error-free literally through our proofreading services. Professional linguists carry out this service by entirely scrutinizing every detail: typing, cohesion, coherence, and diction. We issue proofreading certificates for journal publication requirements.",
-				"price": "Starting from Rp 160/word"
+				"price": "Starting from Rp 160 per word"
 			},
 			"swornTranslation": {
 				"title": "Sworn Translation",
 				"description": "Struggling to find a reliable sworn translator? SAE has got you covered. From KTP (ID card), KK (Family Register), and Akta (Deed) to transcripts and certificates, SAE’s sworn translation service delivers accurate results complete with a stamp, reference number, and official letterhead.",
-				"price": "Starting from Rp 110,000/page"
+				"price": "Starting from Rp 110,000 per page"
 			},
 			"transcription": {
 				"title": "Transcription",
 				"description": "SAE’s transcription supports your audio to be heard better, reach a broader audience, essential for accessibility, ease search and analysis, as well as enhancing SEO.",
-				"price": "Starting from Rp 5,000/minute"
+				"price": "Starting from Rp 5,000 per minute"
 			},
 			"captionInstagram": {
 				"title": "Instagram Captions",
 				"description": "Every photo and video has stories worth telling. Share your thoughts behind the visual through our Instagram Caption services.",
-				"price": "Starting from Rp 35,000/post"
+				"price": "Starting from Rp 35,000 per post"
 			},
 			"englishCourse": {
 				"title": "English Course",
 				"description": "Mastering English means you can connect knowledge and relations from around the world. Our experienced tutors have taught students from young age to college and job seekers. We’re also graduates of Undergraduate and Postgraduate programs linear to the fields. Our English class is customizable with your tight schedule and chosen materials. ",
-				"price": "Starting from Rp 75,000/45 minutes"
+				"price": "Starting from Rp 75,000 per 45 minutes"
 			},
 			"bipaClass": {
 				"title": "BIPA Class",
 				"description": "Our BIPA (Bahasa Indonesia for Non-Native Speakers) class is customizable with your tight schedule and chosen materials. We use various media to learn, so you can have all aspects needed to master bahasa Indonesia: reading, listening, writing, and speaking. Bonus: you’ll get to know Indonesian culture along the way!",
-				"price": "Starting from Rp 150,000/45 minutes"
+				"price": "Starting from Rp 150,000 per 45 minutes"
 			},
 			"subtitling": {
 				"title": "Subtitling",
 				"description": "Level up your video quality with our subtitling service. Subtitle is beyond a clearer hearing, it reaches broader audiences and understanding when the audio is too fast or involving certain dialects and accent.",
-				"price": "Starting from Rp 15,000/minute"
+				"price": "Starting from Rp 15,000 per minute"
 			},
 			"typing": {
 				"title": "Typing",
 				"description": "Having documents in a form of photo or scan that aren’t detectable? Feel free to contact us and get our typing service affordably and fast. Stress-free life is coming! ",
-				"price": "Starting from Rp 10,000/500 words"
+				"price": "Starting from Rp 10,000 per 500 words"
 			},
 			"formatting": {
 				"title": "Formatting",
 				"description": "You deserve a well-rested day after a long journey crafting your work of words. Send the rest of the process to us: formatting. SAE can follow the format guide from your chosen journal or university. We’ve put our magic hands to mostly academic documents such as undergraduate thesis, thesis, dissertation, and journal article.",
-				"price": "Starting from Rp 10,000/page"
+				"price": "Starting from Rp 10,000 per page"
 			},
 			"pptLayouting": {
 				"title": "PPT Layouting",
 				"description": "Deliver your brilliant ideas with supporting media. SAE guarantees your presentation layout is more engaging, moving, and pleasing to the eye. The design follows your taste whilst still aligning with the contents.",
-				"price": "Starting from Rp 10,000/slide"
+				"price": "Starting from Rp 10,000 per slide"
 			}
 		}
 	},

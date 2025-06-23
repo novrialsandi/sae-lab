@@ -65,7 +65,7 @@ const LayoutServiceComponent = ({ children }) => {
 	return (
 		<>
 			<div className="w-full flex flex-col gap-8 items-center md:justify-center min-h-svh py-24">
-				<div className="flex flex-col gap-2 justify-center items-center">
+				<div className="flex flex-col gap-4 justify-center items-center">
 					<div className="bg-[#E9F2F5] flex gap-2 items-center rounded-2xl font-medium text-[#74B2BC] p-2 px-4 w-fit">
 						<Star size="size-5" color="#74B2BC" />
 						{tServices("title")}

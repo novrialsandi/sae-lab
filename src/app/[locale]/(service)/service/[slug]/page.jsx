@@ -38,10 +38,10 @@ export async function generateMetadata({ params }) {
 		title,
 		description,
 		keywords,
-		metadataBase: new URL(`https://www.saelab.id/${locale}`),
+		metadataBase: new URL(`https://www.saelab.id`),
 		openGraph: {
 			type: "website",
-			url: `https://www.saelab.id/${locale}/service/${slug}`,
+			url: `https://www.saelab.id/${locale}/service/${slug}/`,
 			title,
 			description,
 			images: [

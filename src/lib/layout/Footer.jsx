@@ -1,6 +1,6 @@
 import React from "react";
 import { icons } from "../icons/iconSvg";
-import { Facebook, Twitter, Instagram } from "lucide-react";
+import { Instagram, Mail } from "lucide-react";
 
 const FooterPublic = () => {
 	return (
@@ -10,7 +10,11 @@ const FooterPublic = () => {
 				<div className="max-w-64 text-neutral-50 text-lg space-y-6">
 					<div>{icons.iconLogoWhite}</div>
 					<div>Jln. Wates no 123, Bantul Daerah Istimewa Yogyakarta</div>
-					<div>+62 82137903311 (Admin)</div>
+					<div>+62 8213-7903-311 (Admin)</div>
+					<div className="flex items-center gap-2">
+						<Mail className="w-5 h-5" />
+						admin@saelab.id
+					</div>
 				</div>
 
 				{/* Right section */}
@@ -27,24 +31,24 @@ const FooterPublic = () => {
 						<div className="text-lg font-bold">Follow Us</div>
 						<div className="space-y-4">
 							<a
-								href="#"
-								className="flex items-center gap-2 hover:text-white/80 transition"
-							>
-								<Facebook className="w-5 h-5" />
-								Facebook
-							</a>
-							<a
-								href="#"
-								className="flex items-center gap-2 hover:text-white/80 transition"
-							>
-								<Twitter className="w-5 h-5" />X
-							</a>
-							<a
-								href="#"
+								href="https://instagram.com/saelab.id"
 								className="flex items-center gap-2 hover:text-white/80 transition"
 							>
 								<Instagram className="w-5 h-5" />
 								Instagram
+							</a>
+							<a
+								href="https://tiktok.com/@saelab.id"
+								className="flex items-center gap-2 hover:text-white/80 transition"
+							>
+								<svg
+									className="w-5 h-5"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+								>
+									<path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+								</svg>
+								TikTok
 							</a>
 						</div>
 					</div>

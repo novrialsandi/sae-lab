@@ -36,10 +36,7 @@
 		}
 	},
 	"hero": {
-		"headline_part1": "The best",
-		"highlight1": "language",
-		"headline_part2": "solutions, done with",
-		"highlight2": "full dedication",
+		"headline": "Where language businesses are handled passionately",
 		"description": "We offer direct one-on-one consultations. This two-way communication makes every process more personal. We also value your time by always responding quickly and punctually.",
 		"contactButton": "Contact Us",
 		"servicesButton": "View Services"

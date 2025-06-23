@@ -37,10 +37,8 @@
 	},
 
 	"hero": {
-		"headline_part1": "Solusi",
-		"highlight1": "bahasa",
-		"headline_part2": "terbaik, dikerjakan dengan",
-		"highlight2": "sepenuh hati",
+		"headline": "Where language businesses are handled passionately",
+
 		"description": "Kami menawarkan konsultasi langsung antar personal. Komunikasi dua arah ini menjadikan setiap proses lebih personal. Kami juga menghargai waktumu dengan selalu merespons cepat dan tepat waktu.",
 		"contactButton": "Hubungi Kami",
 		"servicesButton": "Lihat Layanan"

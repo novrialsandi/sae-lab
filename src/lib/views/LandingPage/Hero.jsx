@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
 	return (
-		<div className="w-full flex overflow-hidden flex-col items-center bg-from-top min-h-screen pt-16">
+		<div className="w-full flex overflow-hidden flex-col items-center bg-from-top min-h-svh md:pt-16 pt-0">
 			<motion.div
 				initial={{ opacity: 0, y: 30 }}
 				animate={{ opacity: 1, y: 0 }}

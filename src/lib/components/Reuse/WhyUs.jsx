@@ -1,27 +1,11 @@
 import Star from "@/lib/components/Star";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const WhyUs = () => {
-	const whyDetail = [
-		{
-			title: "Profesional & Berpengalaman",
-			subtitle:
-				"Tim kami terdiri dari linguist profesional dengan latar belakang akademik yang linear.",
-			img: "/reuse/businessman.png",
-		},
-		{
-			title: "Akurasi & Kualitas Tinggi",
-			subtitle:
-				"Kami menjamin terjemahan yang akurat, natural, dan sesuai konteks.",
-			img: "/reuse/arrows.png",
-		},
-		{
-			title: "Layanan Cepat & Tepat Waktu",
-			subtitle:
-				"Kami berkomitmen memberikan hasil tepat waktu tanpa mengurangi kualitas.",
-			img: "/reuse/schedule.png",
-		},
-	];
+	const t = useTranslations("whyUs");
+
+	const whyDetail = t.raw("reasons");
 
 	return (
 		<div className="w-full relative flex flex-col items-center justify-center py-8 min-h-svh">
@@ -38,11 +22,10 @@ const WhyUs = () => {
 					<div className="flex flex-col items-center gap-12">
 						<div className="flex flex-col items-center gap-4">
 							<div className="text-3xl sm:text-4xl lg:text-5xl font-semibold">
-								Why SAE?
+								{t("title")}
 							</div>
 							<div className="text-base sm:text-lg text-center text-neutral-500">
-								SAE adalah tempat yang tepat untuk memenuhi segala kebutuhan
-								penulisan Anda.
+								{t("subtitle")}
 							</div>
 						</div>
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-8">

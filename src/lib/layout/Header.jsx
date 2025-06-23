@@ -240,15 +240,15 @@ const HeaderPublic = () => {
 							}}
 							defaultValue={locale}
 							width=""
-							popupTopPosition={50}
+							popupTopPosition={45}
 							size="small"
 							items={[
 								{
-									label: "🇮🇩 ID",
+									label: "🇮🇩",
 									value: "id",
 								},
 								{
-									label: "🇬🇧 EN",
+									label: "🇬🇧",
 									value: "en",
 								},
 							]}
@@ -268,7 +268,7 @@ const HeaderPublic = () => {
 							}}
 							defaultValue={locale}
 							width=""
-							popupTopPosition={50}
+							popupTopPosition={45}
 							size="small"
 							items={[
 								{
@@ -391,9 +391,6 @@ const HeaderPublic = () => {
 																		<h3 className="font-medium text-sm">
 																			{subItem.title}
 																		</h3>
-																		<p className="text-xs text-gray-500 truncate">
-																			{subItem.description}
-																		</p>
 																	</div>
 																</Link>
 															))}

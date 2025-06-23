@@ -21,7 +21,6 @@
 		"brand": "SAE",
 		"menu": {
 			"home": "Beranda",
-
 			"about": "Tentang Kami",
 			"services": "Layanan",
 			"contact": "Kontak",
@@ -36,77 +35,68 @@
 			"consult": "Konsultasi Sekarang"
 		}
 	},
-	"hero": {
-		"title": "Layanan Bahasa Profesional",
-		"subtitle": "Jelajahi layanan kami",
-		"description": "Kami menyediakan konsultasi langsung antar personal. Komunikasi dua arah ini menjadikan setiap proses lebih personal. Kami juga menghargai waktu Anda!",
-		"cta": {
-			"primary": "Mulai Sekarang",
-			"secondary": "Pelajari Lebih Lanjut"
-		}
-	},
+
 	"services": {
 		"title": "Layanan Kami",
 		"subtitle": "Solusi bahasa lengkap untuk kebutuhan Anda",
 		"items": {
 			"translation": {
-				"title": "Translation",
-				"description": "Layanan terjemahan dokumen profesional",
-				"icon": "translate"
+				"title": "Penerjemahan",
+				"description": "Perbedaan bahasa kerap menjadi hambatan bertemunya gagasan-gagasan hebat. SAE siap menjadi jembatan dalam menjangkau belahan dunia melalui layanan penerjemahan yang akurat dan cepat. Kami menerima berbagai jenis dokumen, seperti artikel jurnal, tugas akhir, kuesioner, buku pedoman, buku manual, presentasi PowerPoint, dan profil perusahaan. Dokumen dijamin kerahasiaannya dan dikerjakan oleh linguist yang telah berpengalaman selama lebih dari sembilan tahun.",
+				"price": "Mulai dari Rp 160/kata"
 			},
 			"proofreading": {
-				"title": "Proofreading",
-				"description": "Layanan proofreading dan editing menyeluruh",
-				"icon": "edit"
+				"title": "Penyuntingan",
+				"description": "Tulisan yang baik perlu ditulis dengan baik. SAE memastikan naskah Anda bebas dari kesalahan bahasa melalui layanan penyuntingan (proofreading). Dikerjakan oleh linguis profesional, setiap teks disempurnakan secara menyeluruh mulai dari pengetikan, kohesi dan koherensi, diksi. Kami juga menyediakan sertifikat proofreading untuk keperluan publikasi jurnal.",
+				"price": "Mulai dari Rp 160/kata"
 			},
 			"swornTranslation": {
-				"title": "Sworn Translation",
-				"description": "Layanan terjemahan tersumpah bersertifikat",
-				"icon": "certificate"
+				"title": "Penerjemahan Tersumpah",
+				"description": "Memiliki dokumen resmi yang perlu diterjemahkan untuk keperluan studi, pernikahan, atau pekerjaan? SAE menyediakan layanan penerjemah tersumpah untuk dokumen hukum atau legal, seperti KTP, KK, Akta, Transkrip Nilai, Ijazah, dan dokumen resmi lainnya. Pada hasil penerjemahan akan tertera cap, nomor dan letterhead.",
+				"price": "Mulai dari Rp 110.000/halaman"
 			},
 			"transcription": {
 				"title": "Transkripsi",
-				"description": "Layanan transkripsi audio dan video",
-				"icon": "microphone"
+				"description": "Layanan transkripsi SAE mendukung audio lebih jelas terdengar, meraih audience yang lebih luas, penting untuk aksesibilitas, mempermudah pencarian dan analisis, serta meningkatkan SEO.",
+				"price": "Mulai dari Rp 5.000/menit"
 			},
 			"captionInstagram": {
 				"title": "Caption Instagram",
-				"description": "Caption Instagram yang kreatif dan menarik",
-				"icon": "camera"
+				"description": "Dibalik sebuah unggahan foto atau video Instagram, ada cerita menarik yang sayang kalau tidak dibagikan. Bagikan cerita Anda dengan pengikut bersama layanan pembuatan caption bahasa Inggris maupun bahasa Indonesia dari SAE.",
+				"price": "Mulai dari Rp 35.000/posting"
 			},
 			"englishCourse": {
-				"title": "English Course",
-				"description": "Program pembelajaran bahasa Inggris komprehensif",
-				"icon": "book"
+				"title": "Kursus Bahasa Inggris",
+				"description": "Bahasa Inggris merupakan bahasa internasional yang dapat menjadi penghubung pengetahuan dan relasi global. Tutor kami telah berpengalaman mengajar murid dari jenjang sekolah, kuliah, hingga pencari kerja, serta telah menempuh pendidikan S1 dan S2 yang linier. Kelas terbuka untuk segala jenis usia dan akan diselenggarakan secara daring. Anda dapat pula memilih materi yang ingin dipelajari.",
+				"price": "Mulai dari Rp 75.000/45 menit"
 			},
 			"bipaClass": {
-				"title": "BIPA Class",
-				"description": "Kelas bahasa Indonesia untuk orang asing",
-				"icon": "users"
+				"title": "Kelas BIPA",
+				"description": "Dengan kelas Bahasa Indonesia bagi Penutur Asing (BIPA), Anda dapat belajar bahasa Indonesia secara daring dengan jadwal pilihan Anda. Dengan media pembelajaran yang bervariasi, Anda dapat menguasai bahasa Indonesia dari semua aspek: membaca, mendengarkan, menulis, dan berbicara, sekaligus mengetahui budaya Indonesia.",
+				"price": "Mulai dari Rp 150.000/45 menit"
 			},
 			"subtitling": {
-				"title": "Subtitling",
-				"description": "Layanan subtitle dan caption video",
-				"icon": "video"
+				"title": "Pembuatan Subtitle",
+				"description": "Tingkatkan kualitas video Anda dengan layanan takarir (subtitling) SAE. Takarir tak hanya memperluas jangkauan penonton, tetapi juga mempermudah pemahaman ketika audio terlalu cepat atau mengandung dialek serta aksen yang sulit dimengerti.",
+				"price": "Mulai dari Rp 15.000/menit"
 			},
 			"typing": {
-				"title": "Typing",
-				"description": "Layanan pengetikan dan entry data profesional",
-				"icon": "keyboard"
+				"title": "Pengetikan",
+				"description": "Memiliki dokumen dalam bentuk foto atau hasil pindai (scan) yang tidak bisa secara otomatis terdeteksi? Gunakan jasa pengetikan SAE! Kami menerima segala jenis dokumen dengan hasil rapi, tepat waktu, dan harga terjangkau. Anda dapat menghemat waktu dengan menggunakan jasa pengetikan kami.",
+				"price": "Mulai dari Rp 10.000/500 kata"
 			},
 			"formatting": {
-				"title": "Formatting",
-				"description": "Tata letak dan formatting dokumen profesional",
-				"icon": "layout"
+				"title": "Pemformatan",
+				"description": "Setelah menyelesaikan perjalanan panjang menulis naskah yang berkualitas, Anda berhak jeda dan beristirahat. Serahkan langkah formatting kepada kami dan bersiap healing sejenak. SAE dapat melakukan formatting utamanya untuk dokumen akademik seperti skripsi, tesis, disertasi, maupun artikel jurnal, dengan mengikuti format yang diberikan secara rapi dan cepat.",
+				"price": "Mulai dari Rp 10.000/halaman"
 			},
 			"pptLayouting": {
-				"title": "PPT Layouting",
-				"description": "Layanan desain dan tata letak PowerPoint",
-				"icon": "presentation"
+				"title": "Tata Letak PPT",
+				"description": "Penyampaian presentasi yang baik dibarengi dengan sarana yang mendukung. SAE dapat membuat materi presentasi Anda menjadi lebih menarik, berdampak, dan indah. Design layout mengikuti arahan sesuai permintaan dan diselaraskan dengan konteks.",
+				"price": "Mulai dari Rp 10.000/slide"
 			}
 		}
 	},
-
 	"faq": {
 		"title": "Pertanyaan yang Sering Diajukan",
 		"desc": "Jika ada pertanyaan yang ingin Anda ajukan, kami akan menjawab semua pertanyaan Anda.",
@@ -142,6 +132,38 @@
 		]
 	},
 
+	"consultNow": {
+		"heading": "Siap Membuat Tulisanmu Lebih Bermakna?",
+		"description": "Konsultasikan kebutuhanmu sekarang dan rasakan pengalaman layanan yang personal dan tepat waktu. Kami di sini untuk membantumu menulis dengan lebih baik — dari awal hingga akhir.",
+		"button": "Mulai Konsultasi Sekarang"
+	},
+	"marqueeClient": {
+		"label": "Client Kami",
+		"heading": "Dipercaya oleh Berbagai Perusahaan & Institusi"
+	},
+
+	"whyUs": {
+		"title": "Kenapa SAE?",
+		"subtitle": "SAE adalah tempat yang tepat untuk memenuhi segala kebutuhan penulisan Anda.",
+		"reasons": [
+			{
+				"title": "Profesional & Berpengalaman",
+				"subtitle": "Tim kami terdiri dari linguist profesional dengan latar belakang akademik yang linear.",
+				"img": "/reuse/businessman.png"
+			},
+			{
+				"title": "Akurasi & Kualitas Tinggi",
+				"subtitle": "Kami menjamin terjemahan yang akurat, natural, dan sesuai konteks.",
+				"img": "/reuse/arrows.png"
+			},
+			{
+				"title": "Layanan Cepat & Tepat Waktu",
+				"subtitle": "Kami berkomitmen memberikan hasil tepat waktu tanpa mengurangi kualitas.",
+				"img": "/reuse/schedule.png"
+			}
+		]
+	},
+
 	"about": {
 		"title": "Tentang SAE",
 		"subtitle": "Mitra bahasa terpercaya Anda",
@@ -161,92 +183,7 @@
 			}
 		}
 	},
-	"contact": {
-		"title": "Hubungi Kami",
-		"subtitle": "Hubungi kami untuk kebutuhan bahasa Anda",
-		"form": {
-			"name": {
-				"label": "Nama Lengkap",
-				"placeholder": "Masukkan nama lengkap Anda"
-			},
-			"email": {
-				"label": "Alamat Email",
-				"placeholder": "Masukkan alamat email Anda"
-			},
-			"phone": {
-				"label": "Nomor Telepon",
-				"placeholder": "Masukkan nomor telepon Anda"
-			},
-			"service": {
-				"label": "Layanan yang Dibutuhkan",
-				"placeholder": "Pilih layanan"
-			},
-			"message": {
-				"label": "Pesan",
-				"placeholder": "Ceritakan tentang proyek Anda"
-			},
-			"submit": "Kirim Pesan",
-			"sending": "Mengirim...",
-			"success": "Pesan berhasil dikirim!",
-			"error": "Gagal mengirim pesan. Silakan coba lagi."
-		},
-		"info": {
-			"address": {
-				"title": "Alamat",
-				"value": "Alamat Bisnis Anda"
-			},
-			"phone": {
-				"title": "Telepon",
-				"value": "+62 xxx xxxx xxxx"
-			},
-			"email": {
-				"title": "Email",
-				"value": "info@sae.com"
-			},
-			"hours": {
-				"title": "Jam Operasional",
-				"value": "Senin - Jumat: 09:00 - 18:00"
-			}
-		}
-	},
-	"footer": {
-		"brand": "SAE",
-		"tagline": "Layanan Bahasa Profesional",
-		"quickLinks": {
-			"title": "Tautan Cepat",
-			"items": {
-				"home": "Beranda",
-				"about": "Tentang",
-				"services": "Layanan",
-				"contact": "Kontak",
-				"privacy": "Kebijakan Privasi",
-				"terms": "Syarat Layanan"
-			}
-		},
-		"services": {
-			"title": "Layanan",
-			"items": {
-				"translation": "Translation",
-				"proofreading": "Proofreading",
-				"transcription": "Transkripsi",
-				"courses": "Kursus Bahasa"
-			}
-		},
-		"contact": {
-			"title": "Info Kontak",
-			"address": "Alamat Bisnis Anda",
-			"phone": "+62 xxx xxxx xxxx",
-			"email": "info@sae.com"
-		},
-		"social": {
-			"title": "Ikuti Kami",
-			"facebook": "Facebook",
-			"instagram": "Instagram",
-			"twitter": "Twitter",
-			"linkedin": "LinkedIn"
-		},
-		"copyright": "© 2025 SAE. Semua hak dilindungi."
-	},
+
 	"seo": {
 		"home": {
 			"title": "SAE - Layanan Bahasa Profesional",
@@ -268,18 +205,5 @@
 			"description": "Hubungi kami untuk layanan bahasa profesional. Konsultasi gratis tersedia.",
 			"keywords": "kontak SAE, konsultasi layanan bahasa, quote terjemahan"
 		}
-	},
-	"validation": {
-		"required": "Field ini wajib diisi",
-		"email": "Masukkan alamat email yang valid",
-		"phone": "Masukkan nomor telepon yang valid",
-		"minLength": "Minimal {count} karakter diperlukan",
-		"maxLength": "Maksimal {count} karakter diizinkan"
-	},
-	"status": {
-		"online": "Online",
-		"offline": "Offline",
-		"busy": "Sibuk",
-		"available": "Tersedia untuk konsultasi"
 	}
 }

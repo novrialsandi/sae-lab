@@ -1,7 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "../Button";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 const ConsultNow = () => {
+	const t = useTranslations("consultNow");
+
 	return (
 		<div className="w-full relative flex bg-[#F5F9FA] items-center justify-center min-h-screen py-8 md:py-24">
 			<AnimatePresence mode="wait">
@@ -14,14 +18,14 @@ const ConsultNow = () => {
 				>
 					<div className="max-w-[494px] flex flex-col gap-6 lg:items-start items-center">
 						<div className="font-semibold text-2xl sm:text-3xl lg:text-4xl leading-snug lg:text-start text-center">
-							Siap Membuat Tulisanmu Lebih Bermakna?
+							{t("heading")}
 						</div>
 						<div className="md:text-xl text-base text-neutral-500 lg:text-start text-center">
-							Konsultasikan kebutuhanmu sekarang dan rasakan pengalaman layanan
-							yang personal dan tepat waktu.Kami di sini untuk membantumu
-							menulis dengan lebih baik — dari awal hingga akhir.
+							{t("description")}
 						</div>
-						<Button size="small">Mulai Konsultasi Sekarang</Button>
+						<Button size="small">
+							<Link href={"/contact"}>{t("button")}</Link>
+						</Button>
 					</div>
 					<div className="flex relative">
 						<img src="/about/Grup.png" alt="" className="" />

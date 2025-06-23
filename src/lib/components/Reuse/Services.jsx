@@ -215,7 +215,7 @@ const Services = () => {
 													<h3 className="font-semibold mt-8 text-2xl text-[#364152] leading-tight">
 														{subItem.title}
 													</h3>
-													<div className="text-[#4B5565]">
+													<div className="text-[#4B5565] line-clamp-4">
 														{subItem.description}
 													</div>
 												</div>

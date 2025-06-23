@@ -35,77 +35,68 @@
 			"consult": "Consult Now"
 		}
 	},
-	"hero": {
-		"title": "Professional Language Services",
-		"subtitle": "Explore our services",
-		"description": "We provide direct personal consultation. Two-way communication makes every process more personal. We also appreciate your time!",
-		"cta": {
-			"primary": "Get Started",
-			"secondary": "Learn More"
-		}
-	},
+
 	"services": {
 		"title": "Our Services",
 		"subtitle": "Complete language solutions for your needs",
 		"items": {
 			"translation": {
 				"title": "Translation",
-				"description": "Menerima berbagai jenis dokumen seperti artikel jurnal, tugas akhir, kuisioner, buku pedoman, presentasi power point",
-				"price": "Mulai dari Rp 160 per kata"
+				"description": "Language differences often hinder the fusion of outstanding ideas. SAE is ready to bridge your ideas to travel the world with our accurate and fast translation service. We have translated various documents, such as journal articles, final papers, questionnaires, guide books, manual books, PowerPoint presentations, and company profiles. Rest assured that your documents are kept secret and translated by more than nine-year-old experienced linguists.",
+				"price": "Starting from Rp 160/word"
 			},
 			"proofreading": {
 				"title": "Proofreading",
-				"description": "Memastikan naskah Anda bebas dari kesalahan bahasa melalui layanan penyuntingan (proofreading)",
-				"price": "Mulai dari Rp 160 per kata"
+				"description": "Good writing must be good-written. SAE ensures your manuscript is error-free literally through our proofreading services. Professional linguists carry out this service by entirely scrutinizing every detail: typing, cohesion, coherence, and diction. We issue proofreading certificates for journal publication requirements.",
+				"price": "Starting from Rp 160/word"
 			},
 			"swornTranslation": {
 				"title": "Sworn Translation",
-				"description": "Layanan penerjemah tersumpah untuk dokumen hukum atau legal, seperti KTP, KK, Akta, Transkrip Nilai, Ijazah dan dokumen lainnya.",
-				"price": "Mulai dari Rp 110.000 per halaman"
+				"description": "Struggling to find a reliable sworn translator? SAE has got you covered. From KTP (ID card), KK (Family Register), and Akta (Deed) to transcripts and certificates, SAE’s sworn translation service delivers accurate results complete with a stamp, reference number, and official letterhead.",
+				"price": "Starting from Rp 110,000/page"
 			},
 			"transcription": {
 				"title": "Transcription",
-				"description": "Transkripsi SAE bantu suara jadi teks yang jelas, mudah dicari, inklusif, dan mendukung SEO & analisis.",
-				"price": "Mulai dari Rp 5.000 per menit"
+				"description": "SAE’s transcription supports your audio to be heard better, reach a broader audience, essential for accessibility, ease search and analysis, as well as enhancing SEO.",
+				"price": "Starting from Rp 5,000/minute"
 			},
 			"captionInstagram": {
-				"title": "Instagram Caption",
-				"description": "Bagikan cerita dengan pengikut bersama layanan pembuatan caption bahasa Inggris maupun bahasa Indonesia dari SAE.",
-				"price": "Mulai dari Rp 35.000"
+				"title": "Instagram Captions",
+				"description": "Every photo and video has stories worth telling. Share your thoughts behind the visual through our Instagram Caption services.",
+				"price": "Starting from Rp 35,000/post"
 			},
 			"englishCourse": {
 				"title": "English Course",
-				"description": "Terbuka untuk segala jenis usia dan akan diselenggarakan secara daring. Anda dapat pula memilih materi yang ingin dipelajari.",
-				"price": "Mulai dari Rp 75.000"
+				"description": "Mastering English means you can connect knowledge and relations from around the world. Our experienced tutors have taught students from young age to college and job seekers. We’re also graduates of Undergraduate and Postgraduate programs linear to the fields. Our English class is customizable with your tight schedule and chosen materials. ",
+				"price": "Starting from Rp 75,000/45 minutes"
 			},
 			"bipaClass": {
 				"title": "BIPA Class",
-				"description": "Kuasai bahasa Indonesia dari membaca, mendengarkan, menulis, dan berbicara, sekaligus mengetahui budaya Indonesia.",
-				"price": "Mulai dari Rp 150.000"
+				"description": "Our BIPA (Bahasa Indonesia for Non-Native Speakers) class is customizable with your tight schedule and chosen materials. We use various media to learn, so you can have all aspects needed to master bahasa Indonesia: reading, listening, writing, and speaking. Bonus: you’ll get to know Indonesian culture along the way!",
+				"price": "Starting from Rp 150,000/45 minutes"
 			},
 			"subtitling": {
 				"title": "Subtitling",
-				"description": "Permudah pemahaman ketika audio terlalu cepat atau mengandung dialek serta aksen yang sulit dimengerti",
-				"price": "Mulai dari Rp 15.000 per menit"
+				"description": "Level up your video quality with our subtitling service. Subtitle is beyond a clearer hearing, it reaches broader audiences and understanding when the audio is too fast or involving certain dialects and accent.",
+				"price": "Starting from Rp 15,000/minute"
 			},
 			"typing": {
 				"title": "Typing",
-				"description": "Kami menerima segala jenis dokumen dengan hasil rapi, tepat waktu, dan harga terjangkau.",
-				"price": "Mulai dari Rp 10.000"
+				"description": "Having documents in a form of photo or scan that aren’t detectable? Feel free to contact us and get our typing service affordably and fast. Stress-free life is coming! ",
+				"price": "Starting from Rp 10,000/500 words"
 			},
 			"formatting": {
 				"title": "Formatting",
-				"description": "Format akademik seperti skripsi, tesis, disertasi, artikel jurnal, dengan mengikuti format yang diberikan secara rapi dan cepat.",
-				"price": "Mulai dari Rp 10.000"
+				"description": "You deserve a well-rested day after a long journey crafting your work of words. Send the rest of the process to us: formatting. SAE can follow the format guide from your chosen journal or university. We’ve put our magic hands to mostly academic documents such as undergraduate thesis, thesis, dissertation, and journal article.",
+				"price": "Starting from Rp 10,000/page"
 			},
 			"pptLayouting": {
 				"title": "PPT Layouting",
-				"description": "SAE membantu anda membuat materi presentasi Anda menjadi lebih menarik, berdampak, dan indah",
-				"price": "Mulai dari Rp 10.000"
+				"description": "Deliver your brilliant ideas with supporting media. SAE guarantees your presentation layout is more engaging, moving, and pleasing to the eye. The design follows your taste whilst still aligning with the contents.",
+				"price": "Starting from Rp 10,000/slide"
 			}
 		}
 	},
-
 	"faq": {
 		"title": "Frequently Asked Questions",
 		"desc": "If you have any questions, we are here to answer them all.",
@@ -141,6 +132,38 @@
 		]
 	},
 
+	"consultNow": {
+		"heading": "Ready to Make Your Writing More Meaningful?",
+		"description": "Consult your needs now and experience a personalized and timely service. We're here to help you write better — from start to finish.",
+		"button": "Start Your Consultation Now"
+	},
+	"marqueeClient": {
+		"label": "Our Clients",
+		"heading": "Trusted by Various Companies & Institutions"
+	},
+
+	"whyUs": {
+		"title": "Why SAE?",
+		"subtitle": "SAE is the right place to fulfill all your writing needs.",
+		"reasons": [
+			{
+				"title": "Professional & Experienced",
+				"subtitle": "Our team consists of professional linguists with relevant academic backgrounds.",
+				"img": "/reuse/businessman.png"
+			},
+			{
+				"title": "High Accuracy & Quality",
+				"subtitle": "We guarantee accurate, natural, and contextually appropriate translations.",
+				"img": "/reuse/arrows.png"
+			},
+			{
+				"title": "Fast & Timely Service",
+				"subtitle": "We are committed to delivering results on time without compromising quality.",
+				"img": "/reuse/schedule.png"
+			}
+		]
+	},
+
 	"about": {
 		"title": "About SAE",
 		"subtitle": "Your trusted language partner",
@@ -160,92 +183,7 @@
 			}
 		}
 	},
-	"contact": {
-		"title": "Contact Us",
-		"subtitle": "Get in touch for your language needs",
-		"form": {
-			"name": {
-				"label": "Full Name",
-				"placeholder": "Enter your full name"
-			},
-			"email": {
-				"label": "Email Address",
-				"placeholder": "Enter your email address"
-			},
-			"phone": {
-				"label": "Phone Number",
-				"placeholder": "Enter your phone number"
-			},
-			"service": {
-				"label": "Service Needed",
-				"placeholder": "Select a service"
-			},
-			"message": {
-				"label": "Message",
-				"placeholder": "Tell us about your project"
-			},
-			"submit": "Send Message",
-			"sending": "Sending...",
-			"success": "Message sent successfully!",
-			"error": "Failed to send message. Please try again."
-		},
-		"info": {
-			"address": {
-				"title": "Address",
-				"value": "Your Business Address"
-			},
-			"phone": {
-				"title": "Phone",
-				"value": "+62 xxx xxxx xxxx"
-			},
-			"email": {
-				"title": "Email",
-				"value": "info@sae.com"
-			},
-			"hours": {
-				"title": "Business Hours",
-				"value": "Monday - Friday: 9:00 AM - 6:00 PM"
-			}
-		}
-	},
-	"footer": {
-		"brand": "SAE",
-		"tagline": "Professional Language Services",
-		"quickLinks": {
-			"title": "Quick Links",
-			"items": {
-				"home": "Home",
-				"about": "About",
-				"services": "Services",
-				"contact": "Contact",
-				"privacy": "Privacy Policy",
-				"terms": "Terms of Service"
-			}
-		},
-		"services": {
-			"title": "Services",
-			"items": {
-				"translation": "Translation",
-				"proofreading": "Proofreading",
-				"transcription": "Transcription",
-				"courses": "Language Courses"
-			}
-		},
-		"contact": {
-			"title": "Contact Info",
-			"address": "Your Business Address",
-			"phone": "+62 xxx xxxx xxxx",
-			"email": "info@sae.com"
-		},
-		"social": {
-			"title": "Follow Us",
-			"facebook": "Facebook",
-			"instagram": "Instagram",
-			"twitter": "Twitter",
-			"linkedin": "LinkedIn"
-		},
-		"copyright": "© 2025 SAE. All rights reserved."
-	},
+
 	"seo": {
 		"home": {
 			"title": "SAE - Professional Language Services",
@@ -267,18 +205,5 @@
 			"description": "Contact us for professional language services. Free consultation available.",
 			"keywords": "contact SAE, language services consultation, translation quote"
 		}
-	},
-	"validation": {
-		"required": "This field is required",
-		"email": "Please enter a valid email address",
-		"phone": "Please enter a valid phone number",
-		"minLength": "Minimum {count} characters required",
-		"maxLength": "Maximum {count} characters allowed"
-	},
-	"status": {
-		"online": "Online",
-		"offline": "Offline",
-		"busy": "Busy",
-		"available": "Available for consultation"
 	}
 }

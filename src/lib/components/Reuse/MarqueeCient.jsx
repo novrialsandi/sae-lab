@@ -1,8 +1,11 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 import Star from "../Star";
+import { useTranslations } from "next-intl";
 
 const MarqueeCient = () => {
+	const t = useTranslations("marqueeClient");
+
 	const companyLogos = Array.from(
 		{ length: 19 },
 		(_, index) => `/client-logo/logo${index + 1}.png`
@@ -13,10 +16,10 @@ const MarqueeCient = () => {
 			<div className="flex flex-col items-center gap-4 pb-10">
 				<div className="bg-[#E9F2F5] flex gap-2 items-center rounded-2xl font-medium text-[#74B2BC] p-2 px-4 w-fit">
 					<Star size="size-5" color="#74B2BC" />
-					Client Kami
+					{t("label")}
 				</div>
 				<div className="font-semibold text-2xl sm:text-3xl lg:text-4xl text-center text-[#2f555d]">
-					Dipercaya oleh Berbagai Perusahaan & Institusi
+					{t("heading")}
 				</div>
 			</div>
 			<Marquee>

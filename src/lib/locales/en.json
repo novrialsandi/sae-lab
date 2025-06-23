@@ -222,24 +222,29 @@
 
 	"seo": {
 		"home": {
-			"title": "SAE - Professional Language Services",
-			"description": "Expert translation, proofreading, and language courses. Personal consultation and quality guaranteed.",
+			"title": "SAE - Personalized Language Solutions, Delivered Professionally",
+			"description": "We believe in meaningful, two-way communication. That’s why every consultation is conducted directly and tailored to your needs. A fast and timely response is our way of showing that your time matters.",
 			"keywords": "translation, proofreading, language services, English course, BIPA"
 		},
 		"about": {
-			"title": "About SAE - Professional Language Partners",
-			"description": "Learn about our commitment to quality language services and personal customer care.",
-			"keywords": "about SAE, language services, professional translation"
+			"title": "About Us - SAE Language Services",
+			"description": "Learn more about SAE, our mission, and the dedicated team behind our professional language services.",
+			"keywords": "about SAE, language service team, SAE mission, language experts"
 		},
-		"services": {
-			"title": "Language Services - Translation, Courses & More",
-			"description": "Complete range of language services including translation, proofreading, courses, and specialized services.",
-			"keywords": "translation services, English course, BIPA, proofreading, transcription"
+		"service": {
+			"title": "Our Services - SAE Language Solutions",
+			"description": "Explore our translation, proofreading, and language training services tailored to meet your communication needs.",
+			"keywords": "translation services, proofreading, language training, professional linguists"
 		},
 		"contact": {
-			"title": "Contact SAE - Get Your Free Consultation",
-			"description": "Contact us for professional language services. Free consultation available.",
-			"keywords": "contact SAE, language services consultation, translation quote"
+			"title": "Contact Us - SAE Language Services",
+			"description": "Get in touch with SAE for professional language support, consultations, and service inquiries.",
+			"keywords": "contact SAE, language service inquiry, get in touch, translation support"
+		},
+		"faq": {
+			"title": "Frequently Asked Questions - SAE",
+			"description": "Find answers to commonly asked questions about our language services, pricing, and processes.",
+			"keywords": "SAE FAQ, language service questions, translation pricing, service process"
 		}
 	}
 }

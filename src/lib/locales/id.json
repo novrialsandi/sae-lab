@@ -222,24 +222,28 @@
 
 	"seo": {
 		"home": {
-			"title": "SAE - Layanan Bahasa Profesional",
-			"description": "Layanan translation, proofreading, dan kursus bahasa ahli. Konsultasi personal dan kualitas terjamin.",
-			"keywords": "terjemahan, proofreading, layanan bahasa, kursus bahasa Inggris, BIPA"
+			"title": "SAE - Solusi Bahasa Profesional dengan Sentuhan Personal",
+			"description": "Kami percaya pada komunikasi dua arah yang personal. Karena itu, setiap konsultasi dilakukan langsung dan disesuaikan dengan kebutuhan. Respons cepat dan tepat waktu adalah komitmen kami untuk menghargai waktu Anda.",
+			"keywords": "terjemahan, proofreading, layanan bahasa, kursus Inggris, BIPA"
 		},
 		"about": {
-			"title": "Tentang SAE - Mitra Bahasa Profesional",
-			"description": "Pelajari komitmen kami terhadap layanan bahasa berkualitas dan pelayanan pelanggan yang personal.",
-			"keywords": "tentang SAE, layanan bahasa, terjemahan profesional"
+			"title": "Tentang Kami - SAE Language Services",
+			"description": "Pelajari lebih lanjut tentang SAE, misi kami, dan tim profesional di balik layanan bahasa kami.",
+			"keywords": "tentang SAE, tim layanan bahasa, misi SAE, ahli bahasa"
 		},
-		"services": {
-			"title": "Layanan Bahasa - Translation, Kursus & Lainnya",
-			"description": "Rangkaian lengkap layanan bahasa termasuk translation, proofreading, kursus, dan layanan khusus.",
-			"keywords": "layanan terjemahan, kursus bahasa Inggris, BIPA, proofreading, transkripsi"
+		"service": {
+			"title": "Solusi Bahasa SAE",
+			"keywords": "layanan terjemahan, proofreading, pelatihan bahasa, ahli linguistik profesional"
 		},
 		"contact": {
-			"title": "Kontak SAE - Dapatkan Konsultasi Gratis",
-			"description": "Hubungi kami untuk layanan bahasa profesional. Konsultasi gratis tersedia.",
-			"keywords": "kontak SAE, konsultasi layanan bahasa, quote terjemahan"
+			"title": "Hubungi Kami - SAE Language Services",
+			"description": "Hubungi SAE untuk dukungan bahasa profesional, konsultasi, dan pertanyaan layanan.",
+			"keywords": "kontak SAE, pertanyaan layanan bahasa, hubungi kami, dukungan terjemahan"
+		},
+		"faq": {
+			"title": "Pertanyaan yang Sering Diajukan - SAE",
+			"description": "Temukan jawaban atas pertanyaan umum tentang layanan bahasa kami, harga, dan proses kerja.",
+			"keywords": "FAQ SAE, pertanyaan layanan bahasa, harga terjemahan, proses layanan"
 		}
 	}
 }

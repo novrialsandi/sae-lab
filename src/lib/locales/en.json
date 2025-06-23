@@ -36,8 +36,11 @@
 		}
 	},
 	"hero": {
-		"headline": "Where language businesses are handled passionately",
-		"description": "We offer direct one-on-one consultations. This two-way communication makes every process more personal. We also value your time by always responding quickly and punctually.",
+		"headline_part1": "Personalized",
+		"highlight1": "Language",
+		"headline_part2": "Solutions, Delivered",
+		"highlight2": "Professionally",
+		"description": "We believe in meaningful, two-way communication. That’s why every consultation is conducted directly and tailored to your needs. A fast and timely response is our way of showing that your time matters.",
 		"contactButton": "Contact Us",
 		"servicesButton": "View Services"
 	},
@@ -46,6 +49,7 @@
 		"title": "Our Services",
 		"subtitle": "Complete language solutions for your needs",
 		"select": "SAE Service Options",
+		"explore": "Explore SAE Services",
 		"all": "View More Services",
 		"consult": "Consult via WA",
 		"button": "View Services",
@@ -198,7 +202,7 @@
 		"stats": [
 			{ "label": "Experience", "value": "+9 Yrs" },
 			{ "label": "Projects Completed", "value": "1400+" },
-			{ "label": "Faswork Reviews", "value": "4.9/5" }
+			{ "label": "Published Articles", "value": "100+" }
 		]
 	},
 

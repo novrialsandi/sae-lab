@@ -37,9 +37,11 @@
 	},
 
 	"hero": {
-		"headline": "Where language businesses are handled passionately",
-
-		"description": "Kami menawarkan konsultasi langsung antar personal. Komunikasi dua arah ini menjadikan setiap proses lebih personal. Kami juga menghargai waktumu dengan selalu merespons cepat dan tepat waktu.",
+		"headline_part1": "Solusi",
+		"highlight1": "Bahasa Profesional",
+		"headline_part2": "dengan Sentuhan",
+		"highlight2": "Personal",
+		"description": "Kami percaya pada komunikasi dua arah yang personal. Karena itu, setiap konsultasi dilakukan langsung dan disesuaikan dengan kebutuhan. Respons cepat dan tepat waktu adalah komitmen kami untuk menghargai waktu Anda.",
 		"contactButton": "Hubungi Kami",
 		"servicesButton": "Lihat Layanan"
 	},
@@ -48,6 +50,7 @@
 		"subtitle": "Solusi bahasa lengkap untuk kebutuhan Anda",
 		"select": "Pilihan Layanan SAE",
 		"all": "Lihat Layanan Selengkapnya",
+		"explore": "Jelajahi Layanan SAE",
 		"consult": "Konsultasi lewat WA",
 		"button": "Lihat Layanan",
 		"items": {
@@ -199,7 +202,7 @@
 		"stats": [
 			{ "label": "Pengalaman", "value": "+9 Thn" },
 			{ "label": "Proyek Selesai", "value": "1400+" },
-			{ "label": "Review Faswork", "value": "4.9/5" }
+			{ "label": "Artikel Terpublikasi", "value": "100+" }
 		]
 	},
 

@@ -18,7 +18,10 @@ const Hero = () => {
 				<div className="flex justify-center items-center flex-1">
 					<div className="max-w-[750px] w-full z-10 flex flex-col gap-6 text-center items-center py-8">
 						<h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
-							{t("headline")}
+							{t("headline_part1")}{" "}
+							<span className="text-[#35656F]">{t("highlight1")}</span>{" "}
+							{t("headline_part2")}{" "}
+							<span className="text-[#35656F]">{t("highlight2")}</span>.
 						</h1>
 						<p className="text-base sm:text-lg text-[#697586] max-w-[600px]">
 							{t("description")}

@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { usePathname, useRouter } from "next/navigation";
 import FAQ from "@/lib/components/Reuse/FAQ";
 import Dropdown from "@/lib/components/Dropdown";
+import Star from "@/lib/components/Star";
 
 const LayoutServiceComponent = ({ children }) => {
 	const tServices = useTranslations("services");
@@ -63,18 +64,26 @@ const LayoutServiceComponent = ({ children }) => {
 
 	return (
 		<>
-			<div className="w-full flex flex-col items-center md:justify-center min-h-svh py-24">
+			<div className="w-full flex flex-col gap-8 items-center md:justify-center min-h-svh py-24">
+				<div className="flex flex-col gap-2 justify-center items-center">
+					<div className="bg-[#E9F2F5] flex gap-2 items-center rounded-2xl font-medium text-[#74B2BC] p-2 px-4 w-fit">
+						<Star size="size-5" color="#74B2BC" />
+						{tServices("title")}
+					</div>
+					<div className="text-neutral-900 text-3xl text-center font-semibold">
+						{tServices("explore")}
+					</div>
+					<div className="text-neutral-500 text-center">
+						{tServices("subtitle")}
+					</div>
+				</div>
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, ease: "easeOut" }}
 					className="w-full max-w-[1440px] px-4 sm:px-6 flex flex-col md:flex-row gap-8"
 				>
-					{/* Desktop Navigation */}
 					<div className="p-4 hidden px-6 md:flex flex-col gap-4 rounded-2xl border bg-white border-neutral-200 shadow-md">
-						<div className="text-neutral-800 text-xl font-semibold">
-							{tServices("title")}
-						</div>
 						{menus.map((val, index) => {
 							const active = isActive(val.href);
 							return (
@@ -96,9 +105,6 @@ const LayoutServiceComponent = ({ children }) => {
 					</div>
 					{/* Mobile Dropdown */}
 					<div className="block md:hidden">
-						<div className="text-neutral-800 text-3xl text-center font-semibold mb-3">
-							{tServices("title")}
-						</div>
 						<Dropdown
 							popupTopPosition={50}
 							defaultValue={getCurrentService()}

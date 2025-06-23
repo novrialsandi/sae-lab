@@ -1,33 +1,26 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const HeroAbout = () => {
-	const aboutProject = [
-		{ label: "Pengalaman", value: "+9 Thn" },
-		{ label: "Proyek Selesai", value: "1400+" },
-		{ label: "Review Faswork", value: "4.9/5" },
-	];
+	const t = useTranslations("heroAbout");
+	const aboutProject = t.raw("stats");
 
 	return (
-		<div className="w-full flex flex-col items-center justify-center bg-from-top min-h-screen py-12 sm:py-16 md:py-20 lg:py-24 pt-24">
+		<div className="w-full flex flex-col items-center justify-center bg-from-top min-h-svh py-12 sm:py-16 md:py-20 lg:py-24 pt-24">
 			<motion.div
 				initial={{ opacity: 0, y: 30 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.6, ease: "easeOut" }}
-				className="w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 flex md:flex-col flex-col-reverse lg:flex-row gap-6 sm:gap-8 lg:gap-12 lg:justify-between"
+				className="w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 flex md:flex-col flex-col-reverse lg:flex-row gap-6 sm:gap-8 lg:gap-12 lg:justify-around"
 			>
 				<div className="max-w-full lg:max-w-[533px] flex flex-col justify-between gap-6 sm:gap-8 order-2 lg:order-1">
 					<div className="space-y-3 sm:space-y-4">
 						<div className="text-neutral-700 text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-center md:text-start">
-							Tentang Kami
+							{t("title")}
 						</div>
 						<div className="text-base text-neutral-500 sm:text-lg text-center md:text-start leading-relaxed">
-							SAE adalah tempat yang tepat untuk memenuhi segala kebutuhan
-							penulisan Anda. Kami menyebutnya "rumah" karena di sini Anda tidak
-							hanya memesan lewat formulir, tetapi juga bisa berdiskusi langsung
-							dengan linguist kami. Kami menghargai setiap waktu Anda dengan
-							memberikan respons yang cepat dan hasil kerja yang dikirim tepat
-							waktu.
+							{t("description")}
 						</div>
 					</div>
 					<div className="flex justify-between gap-4 sm:gap-2">

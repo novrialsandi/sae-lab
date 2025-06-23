@@ -113,15 +113,15 @@ const Services = () => {
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true }}
 						transition={{ duration: 1, ease: "easeOut" }}
-						className="w-full z-10 max-w-[1440px] sm:px-10 px-4 flex flex-col gap-4 lg:gap-12 justify-center items-center"
+						className="w-full z-10 max-w-[1440px] sm:px-10 px-4 flex flex-col gap-8 justify-center items-center"
 					>
 						<div className="flex flex-col items-center gap-4">
 							<div className="bg-[#E9F2F5] flex gap-2 items-center rounded-2xl font-medium text-[#74B2BC] p-2 px-4 w-fit">
 								<Star size="size-5" color="#74B2BC" />
-								Tentang Kami
+								{tServices("title")}
 							</div>
 							<div className="font-semibold text-2xl sm:text-3xl lg:text-4xl  text-[#2f555d]">
-								Pilihan Layanan SAE
+								{tServices("select")}
 							</div>
 						</div>
 						<div className="relative w-full">
@@ -204,10 +204,7 @@ const Services = () => {
 									};
 									return (
 										<SwiperSlide key={subIndex} className="h-auto my-12 ">
-											<Link
-												href={subItem.href}
-												className="group flex flex-col justify-between shadow-[0_0_4px_rgba(0,0,1,0.2)] relative p-4 hover:bg-from-bot rounded-lg h-[352px]"
-											>
+											<div className="group flex flex-col justify-between shadow-[0_0_4px_rgba(0,0,1,0.2)] relative p-4 hover:bg-from-bot rounded-lg h-[352px]">
 												<div className="absolute -top-8 rounded-full flex w-fit bg-white border border-neutral-300 p-2">
 													{serviceIcons(subItem.img)}
 												</div>
@@ -222,29 +219,29 @@ const Services = () => {
 												<div className="text-[#697586] text-sm">
 													{formatPriceText(subItem.price)}
 												</div>
-												<div className="w-full">
+												<Link href={subItem.href} className="w-full">
 													<Button
 														size="small"
 														isPrimary={false}
 														className="w-full group-hover:hidden"
 													>
-														Lihat Layanan
+														{tServices("button")}
 													</Button>
 													<Button
 														size="small"
 														isPrimary={true}
 														className="w-full hidden group-hover:block"
 													>
-														Lihat Layanan
+														{tServices("button")}
 													</Button>
-												</div>
-											</Link>
+												</Link>
+											</div>
 										</SwiperSlide>
 									);
 								})}
 							</Swiper>
 						</div>
-						<Button size="small">Lihat Layanan Selengkapnya</Button>
+						<Button size="small"> {tServices("all")}</Button>
 					</motion.div>
 				</AnimatePresence>
 			</div>

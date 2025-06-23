@@ -36,9 +36,22 @@
 		}
 	},
 
+	"hero": {
+		"headline_part1": "Solusi",
+		"highlight1": "bahasa",
+		"headline_part2": "terbaik, dikerjakan dengan",
+		"highlight2": "sepenuh hati",
+		"description": "Kami menawarkan konsultasi langsung antar personal. Komunikasi dua arah ini menjadikan setiap proses lebih personal. Kami juga menghargai waktumu dengan selalu merespons cepat dan tepat waktu.",
+		"contactButton": "Hubungi Kami",
+		"servicesButton": "Lihat Layanan"
+	},
 	"services": {
 		"title": "Layanan Kami",
 		"subtitle": "Solusi bahasa lengkap untuk kebutuhan Anda",
+		"select": "Pilihan Layanan SAE",
+		"all": "Lihat Layanan Selengkapnya",
+
+		"button": "Lihat Layanan",
 		"items": {
 			"translation": {
 				"title": "Penerjemahan",
@@ -164,23 +177,45 @@
 		]
 	},
 
-	"about": {
-		"title": "Tentang SAE",
-		"subtitle": "Mitra bahasa terpercaya Anda",
-		"description": "Kami berkomitmen memberikan layanan bahasa berkualitas tinggi dengan sentuhan personal dan keunggulan profesional.",
-		"features": {
-			"personal": {
-				"title": "Konsultasi Personal",
-				"description": "Komunikasi langsung untuk pemahaman yang lebih baik"
-			},
-			"quality": {
-				"title": "Jaminan Kualitas",
-				"description": "Standar profesional di setiap proyek"
-			},
-			"timely": {
-				"title": "Tepat Waktu",
-				"description": "Kami menghargai waktu dan deadline Anda"
-			}
+	"detail": {
+		"sectionLabel": "Tentang Kami",
+		"heading": "Temukan linguis profesional dengan respon cepat",
+		"description": "Semua linguis kami adalah penutur asli yang menerjemahkan ke bahasa ibu masing-masing dan tinggal di negara asal masing-masing. Setiap linguis memiliki kualifikasi yang sangat baik di bidang penerjemahan.",
+		"button": "Tentang Kami",
+		"services": [
+			"Translation",
+			"Proofreading",
+			"Sworn Translation",
+			"Transkripsi",
+			"+ 7 Lainnya"
+		],
+		"experienceYears": "9 Tahun",
+		"experienceLabel": "Pengalaman",
+		"projectLabel": "Project Selesai",
+		"projectCount": "1400+"
+	},
+
+	"heroAbout": {
+		"title": "Tentang Kami",
+		"description": "SAE adalah tempat yang tepat untuk memenuhi segala kebutuhan penulisan Anda. Kami menyebutnya \"rumah\" karena di sini Anda tidak hanya memesan lewat formulir, tetapi juga bisa berdiskusi langsung dengan linguist kami. Kami menghargai setiap waktu Anda dengan memberikan respons yang cepat dan hasil kerja yang dikirim tepat waktu.",
+		"stats": [
+			{ "label": "Pengalaman", "value": "+9 Thn" },
+			{ "label": "Proyek Selesai", "value": "1400+" },
+			{ "label": "Review Faswork", "value": "4.9/5" }
+		]
+	},
+
+	"contact": {
+		"title": "Kontak",
+		"description": "Konsultasikan proyekmu dengan kami agar dapat kami tangani dengan pendekatan yang tepat.",
+		"form": {
+			"nameLabel": "Nama Lengkap",
+			"namePlaceholder": "Nama Lengkap",
+			"serviceLabel": "Pilih Layanan",
+			"servicePlaceholder": "Pilih Layanan",
+			"descriptionLabel": "Deskripsi Proyek",
+			"descriptionPlaceholder": "Jelaskan proyekmu",
+			"submitButton": "Kirim"
 		}
 	},
 

@@ -7,7 +7,7 @@ const ConsultNow = () => {
 	const t = useTranslations("consultNow");
 
 	return (
-		<div className="w-full relative flex bg-[#F5F9FA] items-center justify-center min-h-screen py-8 md:py-24">
+		<div className="w-full relative flex bg-[#F5F9FA] items-center justify-center min-h-svh py-8 md:py-24">
 			<AnimatePresence mode="wait">
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}
@@ -23,9 +23,9 @@ const ConsultNow = () => {
 						<div className="md:text-xl text-base text-neutral-500 lg:text-start text-center">
 							{t("description")}
 						</div>
-						<Button size="small">
-							<Link href={"/contact"}>{t("button")}</Link>
-						</Button>
+						<Link href={"/contact"}>
+							<Button size="small">{t("button")}</Button>
+						</Link>
 					</div>
 					<div className="flex relative">
 						<img src="/about/Grup.png" alt="" className="" />

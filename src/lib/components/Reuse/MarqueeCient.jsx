@@ -12,7 +12,7 @@ const MarqueeCient = () => {
 	);
 
 	return (
-		<div className="w-full relative flex bg-[#F5F9FA] flex-col items-center justify-center min-h-screen py-8 md:py-24">
+		<div className="w-full relative flex bg-[#F5F9FA] flex-col items-center justify-center min-h-svh py-8 md:py-24">
 			<div className="flex flex-col items-center gap-4 pb-10">
 				<div className="bg-[#E9F2F5] flex gap-2 items-center rounded-2xl font-medium text-[#74B2BC] p-2 px-4 w-fit">
 					<Star size="size-5" color="#74B2BC" />

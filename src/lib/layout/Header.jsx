@@ -8,6 +8,7 @@ import { Link } from "@/i18n/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 import Dropdown from "../components/Dropdown";
+import Flag from "react-flagkit";
 import {
 	EnglishCourseIcon,
 	ProofreadingIcon,
@@ -244,11 +245,11 @@ const HeaderPublic = () => {
 							size="small"
 							items={[
 								{
-									label: "🇮🇩",
+									label: <Flag country="ID" />,
 									value: "id",
 								},
 								{
-									label: "🇬🇧",
+									label: <Flag country="GB" />,
 									value: "en",
 								},
 							]}
@@ -274,11 +275,11 @@ const HeaderPublic = () => {
 							size="small"
 							items={[
 								{
-									label: "🇮🇩",
+									label: <Flag country="ID" />,
 									value: "id",
 								},
 								{
-									label: "🇬🇧",
+									label: <Flag country="GB" />,
 									value: "en",
 								},
 							]}

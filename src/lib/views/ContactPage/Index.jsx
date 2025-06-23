@@ -97,7 +97,6 @@ Please let me know how we can proceed. Thank you!`;
 							onChange={(e) => handleInputChange("name", e.target.value)}
 						/>
 						<Dropdown
-							popupTopPosition={50}
 							size="small"
 							items={menus.map((item) => ({
 								label: item.title,

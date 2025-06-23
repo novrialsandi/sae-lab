@@ -253,9 +253,11 @@ const HeaderPublic = () => {
 								},
 							]}
 						/>
-						<Button size="small" className="rounded-lg">
-							{tNavbar("cta.consultation")}
-						</Button>
+						<Link href={"/contact"}>
+							<Button size="small" className="rounded-lg">
+								{tNavbar("cta.consultation")}
+							</Button>
+						</Link>
 					</div>
 
 					{/* Mobile Menu Button */}

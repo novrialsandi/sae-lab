@@ -237,7 +237,9 @@ const Services = () => {
 								})}
 							</Swiper>
 						</div>
-						<Button size="small"> {tServices("all")}</Button>
+						<Link href={"/service/translation"}>
+							<Button size="small"> {tServices("all")}</Button>
+						</Link>
 					</motion.div>
 				</AnimatePresence>
 			</div>

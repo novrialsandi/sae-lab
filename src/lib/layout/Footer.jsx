@@ -4,6 +4,24 @@ import { Instagram, Mail, Phone, Map } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 
 const FooterPublic = () => {
+	const handleConsultation = () => {
+		// Format WhatsApp message
+		const message = `Hi! I'm interested in your service.
+
+Could you please provide more information and help me get started? Thank you!`;
+
+		// WhatsApp number
+		const whatsappNumber = "6282137903311"; // +62 8213-7903-311 formatted
+
+		// Create WhatsApp URL
+		const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+			message
+		)}`;
+
+		// Open WhatsApp
+		window.open(whatsappUrl, "_blank");
+	};
+
 	return (
 		<div className="w-full space-y-12 pt-12 pb-8 text-neutral-50  bg-primary flex flex-col items-center">
 			<div className="w-full max-w-[1440px] px-6 flex flex-col md:flex-row md:justify-between gap-10">
@@ -18,7 +36,7 @@ const FooterPublic = () => {
 							Istimewa Yogyakarta
 						</div>
 					</div>
-					<div className="flex gap-2">
+					<div className="flex gap-2" onClick={handleConsultation}>
 						<Phone className="min-w-5 min-h-5 mt-1 flex-none" />
 						<div>+62 8213-7903-311 (Firosyan)</div>
 					</div>

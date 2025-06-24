@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { icons } from "../icons/iconSvg";
 import { Instagram, Mail, Phone, Map } from "lucide-react";
@@ -36,10 +38,10 @@ Could you please provide more information and help me get started? Thank you!`;
 							Istimewa Yogyakarta
 						</div>
 					</div>
-					<div className="flex gap-2" onClick={handleConsultation}>
+					<button className="flex gap-2" onClick={handleConsultation}>
 						<Phone className="min-w-5 min-h-5 mt-1 flex-none" />
 						<div>+62 8213-7903-311 (Firosyan)</div>
-					</div>
+					</button>
 					<div className="flex gap-2">
 						<Mail className="min-w-5 min-h-5 mt-1 flex-none" />
 						<div>admin@saelab.id</div>

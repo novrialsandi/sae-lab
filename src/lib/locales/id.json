@@ -156,6 +156,10 @@
 		"heading": "Dipercaya oleh Berbagai Perusahaan & Institusi"
 	},
 
+	"marqueeReview": {
+		"label": "Testimoni",
+		"heading": "Simak Kesan dan Cerita dari Klien Kami."
+	},
 	"whyUs": {
 		"title": "Kenapa SAE?",
 		"subtitle": "SAE adalah tempat yang tepat untuk memenuhi segala kebutuhan penulisan Anda.",
@@ -180,8 +184,8 @@
 
 	"detail": {
 		"sectionLabel": "Tentang Kami",
-		"heading": "Temukan linguis profesional dengan respon cepat",
-		"description": "Semua linguis kami adalah penutur asli yang menerjemahkan ke bahasa ibu masing-masing dan tinggal di negara asal masing-masing. Setiap linguis memiliki kualifikasi yang sangat baik di bidang penerjemahan.",
+		"heading": "Temukan Linguis Profesional dengan Respons Cepat",
+		"description": "Percayakan kebutuhan bahasa Anda pada para linguis ahli kami—penutur asli yang mengerjakan terjemahan dalam bahasa ibu mereka, langsung dari negara asalnya. Setiap linguis kami memiliki kualifikasi unggulan dan pengalaman luas di bidang bahasa, siap memberikan hasil terbaik dengan cepat dan akurat.",
 		"button": "Tentang Kami",
 		"services": [
 			"Translation",

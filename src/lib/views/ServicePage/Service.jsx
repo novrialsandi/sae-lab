@@ -168,11 +168,15 @@ Could you please provide more information and help me get started? Thank you!`;
 							{currentService.title}
 						</div>
 					</div>
-					<img src="/image.png" alt="" className="w-full" />
+					<img
+						src={`/services/${currentService.key}.png`}
+						alt=""
+						className="w-full"
+					/>
 					<div className="text-[#697586] text-sm">
 						{currentService.description}
 					</div>
-					<div className="flex gap-4 items-center">
+					<div className="flex gap-4 md:items-center md:flex-row flex-col">
 						<div className="text-[#697586] text-sm">
 							{formatPriceText(currentService.price)}
 						</div>

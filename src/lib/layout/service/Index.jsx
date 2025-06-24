@@ -7,6 +7,7 @@ import { usePathname, useRouter } from "next/navigation";
 import FAQ from "@/lib/components/Reuse/FAQ";
 import Dropdown from "@/lib/components/Dropdown";
 import Star from "@/lib/components/Star";
+import MarqueeReview from "@/lib/views/ServicePage/MarqueeReview";
 
 const LayoutServiceComponent = ({ children }) => {
 	const tServices = useTranslations("services");
@@ -70,7 +71,7 @@ const LayoutServiceComponent = ({ children }) => {
 						<Star size="size-5" color="#74B2BC" />
 						{tServices("title")}
 					</div>
-					<div className="text-neutral-900 text-3xl text-center font-semibold">
+					<div className="text-neutral-900 text-2xl sm:text-3xl lg:text-4xl text-center font-semibold">
 						{tServices("explore")}
 					</div>
 					<div className="text-neutral-500 text-center">
@@ -119,6 +120,7 @@ const LayoutServiceComponent = ({ children }) => {
 					<div className="flex-1">{children}</div>
 				</motion.div>
 			</div>
+			<MarqueeReview />
 			<FAQ />
 		</>
 	);

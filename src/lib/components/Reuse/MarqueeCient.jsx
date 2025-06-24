@@ -18,7 +18,7 @@ const MarqueeCient = () => {
 					<Star size="size-5" color="#74B2BC" />
 					{t("label")}
 				</div>
-				<div className="font-semibold text-2xl sm:text-3xl lg:text-4xl text-center text-[#2f555d]">
+				<div className="font-semibold text-2xl sm:text-3xl lg:text-4xl text-center text-[#2f555d] px-2">
 					{t("heading")}
 				</div>
 			</div>

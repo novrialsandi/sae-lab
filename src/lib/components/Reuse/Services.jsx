@@ -200,7 +200,7 @@ const Services = () => {
 									};
 									return (
 										<SwiperSlide key={subIndex} className="h-auto my-12 ">
-											<div className="group flex flex-col justify-between shadow-[0_0_4px_rgba(0,0,1,0.2)] relative p-4 hover:bg-from-bot rounded-lg h-[352px]">
+											<div className="group flex flex-col justify-between shadow-md relative p-4 hover:bg-from-bot rounded-lg h-[352px]">
 												<div className="absolute -top-8 rounded-full flex w-fit bg-white border border-neutral-300 p-2">
 													{serviceIcons(subItem.img)}
 												</div>

@@ -33,6 +33,7 @@ export async function generateMetadata({ params }) {
 	const title = `${t(`${key}.title`)} - ${tSeo(`title`)} `;
 	const description = t(`${key}.description`);
 	const keywords = tSeo(`keywords`);
+	const img = `/services/${key}.png`;
 
 	return {
 		title,
@@ -46,7 +47,7 @@ export async function generateMetadata({ params }) {
 			description,
 			images: [
 				{
-					url: "/meta.jpeg",
+					url: img,
 					width: 1200,
 					height: 630,
 				},
@@ -56,7 +57,7 @@ export async function generateMetadata({ params }) {
 			card: "summary_large_image",
 			title,
 			description,
-			images: ["/meta.jpeg"],
+			images: [img],
 		},
 	};
 }

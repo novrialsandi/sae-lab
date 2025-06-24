@@ -155,6 +155,10 @@
 		"label": "Our Clients",
 		"heading": "Trusted by Various Companies & Institutions"
 	},
+	"marqueeReview": {
+		"label": "Testimonials",
+		"heading": "Check Out Our Clients' Impressions and Stories"
+	},
 
 	"whyUs": {
 		"title": "Why SAE?",
@@ -180,8 +184,8 @@
 
 	"detail": {
 		"sectionLabel": "About Us",
-		"heading": "Find professional linguists with fast response",
-		"description": "All our linguists are native speakers who translate into their mother tongue and reside in their home countries. Each linguist is highly qualified in the field of translation.",
+		"heading": "Connect with Professional Linguists for Fast, Reliable Service",
+		"description": "Trust your language needs to our team of expert linguists—native speakers who translate exclusively into their mother tongue while residing in their home country. Each linguist is highly qualified and brings extensive experience in their field, ensuring accurate, high-quality results delivered with speed and precision.",
 		"button": "About Us",
 		"services": [
 			"Translation",

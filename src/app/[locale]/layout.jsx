@@ -14,7 +14,7 @@ const manrope = Manrope({
 
 export default async function LocaleLayout({ children, params }) {
 	const t = await getTranslations("seo.home");
-	const tServices = await getTranslations("services.items");
+	const tServices = await getTranslations("services");
 
 	const { locale } = await params;
 	if (!hasLocale(routing.locales, locale)) {
@@ -42,30 +42,94 @@ export default async function LocaleLayout({ children, params }) {
 		openingHours: "Mo-Su 00:00-23:59",
 		hasOfferCatalog: {
 			"@type": "OfferCatalog",
-			name: "Language Services",
+			name: tServices("title"),
 			itemListElement: [
 				{
 					"@type": "Offer",
 					itemOffered: {
 						"@type": "Service",
-						name: "Translation",
-						description: tServices("translation.description"),
+						name: tServices("items.translation.title"),
+						description: tServices("items.translation.description"),
 					},
 				},
 				{
 					"@type": "Offer",
 					itemOffered: {
 						"@type": "Service",
-						name: "Proofreading",
-						description: tServices("proofreading.description"),
+						name: tServices("items.proofreading.title"),
+						description: tServices("items.proofreading.description"),
 					},
 				},
 				{
 					"@type": "Offer",
 					itemOffered: {
 						"@type": "Service",
-						name: "Sworn Translation",
-						description: tServices("swornTranslation.description"),
+						name: tServices("items.swornTranslation.title"),
+						description: tServices("items.swornTranslation.description"),
+					},
+				},
+				{
+					"@type": "Offer",
+					itemOffered: {
+						"@type": "Service",
+						name: tServices("items.transcription.title"),
+						description: tServices("items.transcription.description"),
+					},
+				},
+				{
+					"@type": "Offer",
+					itemOffered: {
+						"@type": "Service",
+						name: tServices("items.captionInstagram.title"),
+						description: tServices("items.captionInstagram.description"),
+					},
+				},
+				{
+					"@type": "Offer",
+					itemOffered: {
+						"@type": "Service",
+						name: tServices("items.englishCourse.title"),
+						description: tServices("items.englishCourse.description"),
+					},
+				},
+				{
+					"@type": "Offer",
+					itemOffered: {
+						"@type": "Service",
+						name: tServices("items.bipaClass.title"),
+						description: tServices("items.bipaClass.description"),
+					},
+				},
+				{
+					"@type": "Offer",
+					itemOffered: {
+						"@type": "Service",
+						name: tServices("items.subtitling.title"),
+						description: tServices("items.subtitling.description"),
+					},
+				},
+				{
+					"@type": "Offer",
+					itemOffered: {
+						"@type": "Service",
+						name: tServices("items.typing.title"),
+						description: tServices("items.typing.description"),
+					},
+				},
+				{
+					"@type": "Offer",
+					itemOffered: {
+						"@type": "Service",
+						name: tServices("items.formatting.title"),
+						description: tServices("items.formatting.description"),
+					},
+				},
+				{
+					"@type": "Offer",
+					itemOffered: {
+						"@type": "Service",
+						name: tServices("items.pptLayouting.title"),
+						description: tServices("items.pptLayouting.description"),
 					},
 				},
 			],

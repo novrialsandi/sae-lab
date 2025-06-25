@@ -1,9 +1,40 @@
 import React from "react";
 import { icons } from "../icons/iconSvg";
 import { Instagram, Mail, Phone, Map } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
 const FooterPublic = () => {
+	const tServices = useTranslations("services");
+
+	const menus = [
+		"translation",
+		"proofreading",
+		"swornTranslation",
+		"transcription",
+		"captionInstagram",
+		"englishCourse",
+		"bipaClass",
+		"subtitling",
+		"typing",
+		"formatting",
+		"pptLayouting",
+	].map((key) => ({
+		key,
+		title: tServices(`items.${key}.title`),
+		href: `/service/${
+			key === "swornTranslation"
+				? "sworn-translation"
+				: key === "captionInstagram"
+				? "instagram-caption"
+				: key === "pptLayouting"
+				? "PPT-layouting"
+				: key === "bipaClass"
+				? "BIPA-class"
+				: key
+		}`,
+	}));
+
 	// Preformatted WhatsApp URL
 	const whatsappUrl = `https://wa.me/6282137903311?text=${encodeURIComponent(
 		`Hi! I'm interested in your service.\n\nCould you please provide more information and help me get started? Thank you!`
@@ -41,7 +72,7 @@ const FooterPublic = () => {
 				</div>
 
 				{/* Right section */}
-				<div className="flex flex-row max-w-96 md:justify-between gap-10 md:gap-20 w-full text-neutral-50">
+				<div className="flex flex-row lg:w-1/2 w-full md:justify-between md:flex-nowrap flex-wrap gap-10 md:gap-20 text-neutral-50">
 					<div className="space-y-6">
 						<div className="text-lg font-bold">Company</div>
 						<div className="flex flex-col gap-4">
@@ -51,6 +82,7 @@ const FooterPublic = () => {
 							<Link href={"/faq"}>FAQ</Link>
 						</div>
 					</div>
+
 					<div className="space-y-6">
 						<div className="text-lg font-bold">Follow Us</div>
 						<div className="space-y-4">
@@ -78,6 +110,26 @@ const FooterPublic = () => {
 								</svg>
 								TikTok
 							</a>
+						</div>
+					</div>
+					{/* Services */}
+					<div className="space-y-6">
+						<div className="text-lg font-bold">Services</div>
+						<div className="flex md:flex-col lg:flex-row flex-row gap-10 lg:gap-20 md:gap-4">
+							<div className="flex flex-col gap-4">
+								{menus.slice(0, 6).map((menu) => (
+									<Link key={menu.key} href={menu.href}>
+										{menu.title}
+									</Link>
+								))}
+							</div>
+							<div className="flex flex-col gap-4">
+								{menus.slice(6, 11).map((menu) => (
+									<Link key={menu.key} href={menu.href}>
+										{menu.title}
+									</Link>
+								))}
+							</div>
 						</div>
 					</div>
 				</div>

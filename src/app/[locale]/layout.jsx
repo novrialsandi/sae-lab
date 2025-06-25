@@ -136,7 +136,7 @@ export default async function LocaleLayout({ children, params }) {
 		},
 		sameAs: [
 			"https://www.instagram.com/saelab.id",
-			"https://www.tiktok.com/company/saelab",
+			"https://www.tiktok.com/@saelab.id",
 		],
 	};
 

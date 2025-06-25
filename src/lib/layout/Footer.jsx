@@ -62,7 +62,7 @@ const FooterPublic = () => {
 						className="flex gap-2"
 					>
 						<Phone className="min-w-5 min-h-5 mt-1 flex-none" />
-						<div>+62 8213-7903-311 (Firosyan)</div>
+						<div>+62 821-3790-3311 (Firosyan)</div>
 					</a>
 
 					<div className="flex gap-2">

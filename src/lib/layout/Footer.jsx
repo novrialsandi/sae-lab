@@ -72,7 +72,8 @@ const FooterPublic = () => {
 				</div>
 
 				{/* Right section */}
-				<div className="flex flex-row lg:w-1/2 w-full md:justify-between md:flex-nowrap flex-wrap gap-10 md:gap-20 text-neutral-50">
+				{/* <div className="flex flex-row lg:w-1/2 w-full md:justify-between md:flex-nowrap flex-wrap gap-10 md:gap-20 text-neutral-50"> */}
+				<div className="flex flex-row max-w-96 md:justify-between gap-10 md:gap-20 w-full text-neutral-50">
 					<div className="space-y-6">
 						<div className="text-lg font-bold">Company</div>
 						<div className="flex flex-col gap-4">

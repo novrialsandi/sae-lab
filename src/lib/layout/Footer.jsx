@@ -112,7 +112,7 @@ const FooterPublic = () => {
 							</a>
 						</div>
 					</div>
-					{/* Services */}
+					{/* Services
 					<div className="space-y-6">
 						<div className="text-lg font-bold">Services</div>
 						<div className="flex md:flex-col lg:flex-row flex-row gap-10 lg:gap-20 md:gap-4">
@@ -131,7 +131,7 @@ const FooterPublic = () => {
 								))}
 							</div>
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</div>
 

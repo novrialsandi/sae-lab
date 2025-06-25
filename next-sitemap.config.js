@@ -6,7 +6,7 @@ module.exports = {
 	priority: 0.7,
 	trailingSlash: true,
 	i18n: {
-		locales: ["id", "en"], // sesuaikan dengan bahasa yang kamu dukung
+		locales: ["id", "en"],
 		defaultLocale: "id",
 	},
 	additionalPaths: async (config) => {

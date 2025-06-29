@@ -26,7 +26,7 @@ export default async function sitemap() {
 		return locales.map((locale) => {
 			let priority = 0.8;
 			if (path === "/") {
-				priority = 1.0;
+				priority = 1;
 			} else if (["/about", "/contact", "/faq"].includes(path)) {
 				priority = 0.7;
 			}
